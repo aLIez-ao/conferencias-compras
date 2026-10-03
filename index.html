@@ -18,21 +18,15 @@
                 <div class="two columns u-pull-right">
                     <ul>
                         <li class="submenu">
-                            <img src="img/cart.png" id="img-carrito">
+                            <button id="img-carrito" class="boton-carrito" aria-label="Abrir carrito">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 20c-1.1 0-1.99.9-1.99 2S5.9 24 7 24s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0020 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                                <span id="badge-carrito">0</span>
+                            </button>
                             <div id="carrito">
-                                <table id="lista-carrito" class="u-full-width">
-                                    <thead>
-                                        <tr>
-                                            <th>Imagen</th>
-                                            <th>Nombre</th>
-                                            <th>Precio</th>
-                                            <th>Cantidad</th>
-                                            <th></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody></tbody>
-                                </table>
+                                <div id="lista-carrito"></div>
                                 <p id="total-carrito">Total: $0</p>
+                                <a href="#" id="pagar" class="button u-full-width">Pagar</a>
+                                <a href="carrito.html" class="button u-full-width">Ver carrito</a>
                                 <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
                             </div>
                         </li>
@@ -61,7 +55,7 @@
                     <div class="info-card">
                         <h4>Java 1</h4>
                         <p>Pedro Torres</p>
-                        <img src="img/estrellas.png">
+                        <span class="estrellas">★★★★★</span>
                         <p class="precio">$100 <span class="u-pull-right ">$75</span></p>
                         <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="1">Agregar
                             Al Carrito</a>
@@ -74,7 +68,7 @@
                     <div class="info-card">
                         <h4>Java 2</h4>
                         <p>Pedro Torres</p>
-                        <img src="img/estrellas.png">
+                        <span class="estrellas">★★★★★</span>
                         <p class="precio">$300 <span class="u-pull-right ">$215</span></p>
                         <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="2">Agregar
                             Al Carrito</a>
@@ -87,7 +81,7 @@
                     <div class="info-card">
                         <h4>Java 3</h4>
                         <p>Pedro Torres</p>
-                        <img src="img/estrellas.png">
+                        <span class="estrellas">★★★★★</span>
                         <p class="precio">$300 <span class="u-pull-right ">$215</span></p>
                         <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="3">Agregar
                             Al Carrito</a>
@@ -105,7 +99,9 @@
         </div>
     </footer>
 
-    <script src="js/codigo.js"></script>
+    <script src="js/modelo-carrito.js"></script>
+    <script src="js/vista-carrito.js"></script>
+    <script src="js/app.js"></script>
 
 </body>
 

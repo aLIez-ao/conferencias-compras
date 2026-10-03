@@ -51,7 +51,7 @@ ul {
 .submenu #carrito{
     display: none;
 }
-.submenu:hover #carrito{
+#carrito.activo{
     display: block;
     position: absolute;
     right:0;
@@ -60,8 +60,92 @@ ul {
     z-index: 1;
     background-color: white;
     padding: 20px;
-    min-height: 400px;
-    min-width: 300px;
+    min-width: 320px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.2);
+}
+.boton-carrito{
+    position: relative;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+.boton-carrito svg{
+    width: 32px;
+    height: 32px;
+    fill: #741d51;
+}
+.boton-carrito.activo svg{
+    fill: #e44e52;
+}
+#badge-carrito{
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    min-width: 18px;
+    height: 18px;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.estrellas{
+    color: #f4c150;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+.item-carrito{
+    border-bottom: 1px solid #e1e1e1;
+    padding: 10px 0;
+    text-align: left;
+}
+.item-producto{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.item-producto h5{
+    margin: 0;
+    font-size: 14px;
+}
+.item-meta{
+    font-size: 12px;
+    color: #666;
+    margin: 5px 0;
+}
+.item-acciones{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+.modificador{
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.modificador button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 12px;
+    font-size: 16px;
+    line-height: 1;
+}
+.modificador .cantidad{
+    padding: 0 10px;
+    cursor: text;
+    font-weight: 700;
+}
+.modificador .icono-basura svg{
+    width: 14px;
+    height: 14px;
+    fill: #888;
 }
 .vacio {
     padding: 10px;
