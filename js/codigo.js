@@ -5,6 +5,21 @@ const listaLibros=document.querySelector('#lista-libros')
 let itemsCarrito=[];
 
 registrarListener();
+cargarCarrito();
+
+//persistencia
+function guardarCarrito(){
+    localStorage.setItem('carrito',JSON.stringify(itemsCarrito));
+}
+
+function cargarCarrito(){
+    const datos=JSON.parse(localStorage.getItem('carrito'));
+    if(datos){
+        itemsCarrito=datos;
+        htmlCarrito();
+    }
+}
+
 function registrarListener(){
     listaLibros.addEventListener('click',agregarLibro)
 
@@ -14,6 +29,7 @@ function registrarListener(){
     //vaciar carrito
     vaciarCarritoB.addEventListener('click',()=>{
         itemsCarrito=[];
+        guardarCarrito();
         htmlCarrito();
     })
 }
@@ -25,6 +41,7 @@ function eliminarLibro(evt){
         const libroId=evt.target.getAttribute('data-id');
         //normalizar tipos: comparar ambos como string
         itemsCarrito=itemsCarrito.filter(libro=>String(libro.id)!==String(libroId))
+        guardarCarrito();
         htmlCarrito();
     }
 
@@ -70,6 +87,7 @@ function leerLibro(libro){
     //Hacemos una copia y lo agregamos al carrito
     
     console.log(itemsCarrito)
+    guardarCarrito();
     htmlCarrito();
 }
 
