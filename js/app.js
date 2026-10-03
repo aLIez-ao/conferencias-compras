@@ -44,9 +44,9 @@ function registrarListener(){
 }
 
 function agregarLibro(evt){
-    evt.preventDefault()
     const boton=evt.target.closest('.agregar-carrito');
     if(boton){
+        evt.preventDefault();
         leerLibro(boton.parentElement.parentElement);
     }
 }
