@@ -26,6 +26,9 @@ function registrarListener(){
     //elimar libro
     carrito.addEventListener('click',eliminarLibro)
 
+    //cambiar cantidad (+/-)
+    carrito.addEventListener('click',cambiarCantidad)
+
     //vaciar carrito
     vaciarCarritoB.addEventListener('click',()=>{
         itemsCarrito=[];
@@ -45,6 +48,23 @@ function eliminarLibro(evt){
         htmlCarrito();
     }
 
+}
+
+//cambiar cantidad de un item
+function cambiarCantidad(evt){
+    evt.preventDefault()
+    const id=evt.target.getAttribute('data-id');
+    if(evt.target.classList.contains('mas')){
+        itemsCarrito=itemsCarrito.map(item=>String(item.id)===String(id)?{...item,cantidad:item.cantidad+1}:item);
+    }else if(evt.target.classList.contains('menos')){
+        itemsCarrito=itemsCarrito
+            .map(item=>String(item.id)===String(id)?{...item,cantidad:item.cantidad-1}:item)
+            .filter(item=>item.cantidad>0);
+    }else{
+        return;
+    }
+    guardarCarrito();
+    htmlCarrito();
 }
 
 //funciones
@@ -106,7 +126,11 @@ function htmlCarrito(){
             </td>
             <td>${nombre}</td>
             <td>$${precio}</td>
-            <td>${cantidad}</td>
+            <td>
+                <button class="menos" data-id="${id}">-</button>
+                ${cantidad}
+                <button class="mas" data-id="${id}">+</button>
+            </td>
             <td>
                 <a href="#" class="borrar-curso" data-id="${libros.id}">'x'</a>
             </td>            
