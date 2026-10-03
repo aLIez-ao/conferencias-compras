@@ -23,9 +23,18 @@ function registrarListener(){
 
     //abrir/cerrar carrito con click y cambiar color
     if(botonCarrito && carrito){
-        botonCarrito.addEventListener('click',()=>{
+        botonCarrito.addEventListener('click',(evt)=>{
+            evt.stopPropagation();
             carrito.classList.toggle('activo');
             botonCarrito.classList.toggle('activo');
+        })
+
+        //cerrar el carrito al dar click fuera
+        document.addEventListener('click',(evt)=>{
+            if(!evt.target.closest('.submenu')){
+                carrito.classList.remove('activo');
+                botonCarrito.classList.remove('activo');
+            }
         })
     }
 

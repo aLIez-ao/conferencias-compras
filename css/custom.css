@@ -92,6 +92,14 @@ ul {
     align-items: center;
     justify-content: center;
 }
+#badge-carrito.oculto{
+    display: none;
+}
+#total-carrito,
+#total-detalle{
+    font-weight: 700;
+    font-size: 2rem;
+}
 .estrellas{
     color: #f4c150;
     font-size: 18px;

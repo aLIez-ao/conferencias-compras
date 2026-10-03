@@ -39,6 +39,9 @@ function htmlCarrito(){
 
     const badge=document.querySelector('#badge-carrito');
     if(badge){
-        badge.textContent=itemsCarrito.reduce((acum,item)=>acum+item.cantidad,0);
+        const totalItems=itemsCarrito.reduce((acum,item)=>acum+item.cantidad,0);
+        badge.textContent=totalItems;
+        //sin notificacion si el carrito esta vacio
+        badge.classList.toggle('oculto',totalItems===0);
     }
 }

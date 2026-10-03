@@ -42,9 +42,9 @@ function leerLibro(libro){
 }
 
 function eliminarLibro(evt){
-    evt.preventDefault()
     const boton=evt.target.closest('.borrar-curso');
     if(boton){
+        evt.preventDefault();
         const libroId=boton.getAttribute('data-id');
         itemsCarrito=itemsCarrito.filter(libro=>String(libro.id)!==String(libroId))
         guardarCarrito();
@@ -53,13 +53,14 @@ function eliminarLibro(evt){
 }
 
 function cambiarCantidad(evt){
-    evt.preventDefault()
     const boton=evt.target.closest('button');
     if(!boton) return;
     const id=boton.getAttribute('data-id');
     if(boton.classList.contains('mas')){
+        evt.preventDefault();
         itemsCarrito=itemsCarrito.map(item=>String(item.id)===String(id)?{...item,cantidad:item.cantidad+1}:item);
     }else if(boton.classList.contains('menos')){
+        evt.preventDefault();
         itemsCarrito=itemsCarrito
             .map(item=>String(item.id)===String(id)?{...item,cantidad:item.cantidad-1}:item)
             .filter(item=>item.cantidad>0);
