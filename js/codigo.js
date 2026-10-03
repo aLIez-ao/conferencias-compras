@@ -113,6 +113,10 @@ function htmlCarrito(){
         `;
         contenedorCarrito.appendChild(fila);
     });
+
+    //total del carrito
+    const total=itemsCarrito.reduce((acum,item)=>acum+item.precio*item.cantidad,0);
+    document.querySelector('#total-carrito').textContent=`Total: $${total}`;
 }
 
 function limpiarHTML(){
