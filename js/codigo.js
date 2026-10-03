@@ -45,6 +45,8 @@ function leerLibro(libro){
     const libroInfo={
         imagen:libro.querySelector('img').src,
         nombre: libro.querySelector('h4').textContent,
+        lugar: libro.querySelector('[data-lugar]')?.textContent || libro.dataset?.lugar || '',
+        hora: libro.querySelector('[data-hora]')?.textContent || libro.dataset?.hora || '',
         precio: Number(libro.querySelector('.precio span').textContent.replace('$','').trim()),
         id: libro.querySelector('a').getAttribute('data-id'),
         cantidad: 1
