@@ -1,10 +1,12 @@
 //modelo: estado del carrito y persistencia
-let itemsCarrito=[];
+let itemsCarrito=[]; //lista de items del carrito
 
+//guardar el carrito en localStorage
 function guardarCarrito(){
     localStorage.setItem('carrito',JSON.stringify(itemsCarrito));
 }
 
+//cargar el carrito desde localStorage al iniciar
 function cargarCarrito(){
     const datos=JSON.parse(localStorage.getItem('carrito'));
     if(datos){
@@ -13,6 +15,7 @@ function cargarCarrito(){
     }
 }
 
+//leer los datos de un producto y agregarlo (o sumar cantidad si ya existe)
 function leerLibro(libro){
     const libroInfo={
         imagen:libro.querySelector('img').src,
@@ -26,6 +29,7 @@ function leerLibro(libro){
 
     const existe=itemsCarrito.some(libro=>String(libro.id)===String(libroInfo.id));
 
+    //si ya existe solo se aumenta la cantidad
     if(existe){
         itemsCarrito=itemsCarrito.map(libro=>{
             if(String(libro.id)===String(libroInfo.id)){
@@ -41,6 +45,7 @@ function leerLibro(libro){
     htmlCarrito();
 }
 
+//eliminar un item del carrito por su id
 function eliminarLibro(evt){
     const boton=evt.target.closest('.borrar-curso');
     if(boton){
@@ -53,6 +58,7 @@ function eliminarLibro(evt){
     }
 }
 
+//sumar o restar cantidad de un item (si llega a 0 se elimina)
 function cambiarCantidad(evt){
     const boton=evt.target.closest('button');
     if(!boton) return;
@@ -74,12 +80,14 @@ function cambiarCantidad(evt){
     htmlCarrito();
 }
 
+//vaciar todo el carrito
 function vaciarCarrito(){
     itemsCarrito=[];
     guardarCarrito();
     htmlCarrito();
 }
 
+//calcular el total a pagar
 function totalCarrito(){
     return itemsCarrito.reduce((acum,item)=>acum+item.precio*item.cantidad,0);
 }

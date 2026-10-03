@@ -1,7 +1,8 @@
 //vista: render del carrito y badge
-const listaCarritoEl=document.querySelector('#lista-carrito');
-const listaDetalleEl=document.querySelector('#lista-carrito-detalle');
+const listaCarritoEl=document.querySelector('#lista-carrito'); //contenedor del panel
+const listaDetalleEl=document.querySelector('#lista-carrito-detalle'); //contenedor de la pagina detalle
 
+//generar el HTML de la lista y actualizar total y badge
 function htmlCarrito(){
     const html=itemsCarrito.map(item=>{
         const {imagen,nombre,lugar,hora,precio,cantidad,id}=item;
