@@ -3,7 +3,6 @@ import { cargarCarrito, vaciarCarrito, eliminarProducto, cambiarCantidad, leerPr
 
 const carrito=document.querySelector('#carrito'); //panel del carrito
 const vaciarCarritoB=document.querySelector('#vaciar-carrito') //boton vaciar
-const listaProductos=document.querySelector('#lista-productos') //contenedor de productos
 const botonCarrito=document.querySelector('#img-carrito') //icono del carrito
 
 registrarListener();
@@ -11,8 +10,8 @@ cargarCarrito();
 
 //registrar todos los eventos de la aplicacion
 function registrarListener(){
-    //agregar producto al carrito desde el listado
-    if(listaProductos) listaProductos.addEventListener('click',agregarProducto)
+    //agregar producto al carrito desde cualquier listado o detalle
+    document.addEventListener('click',agregarProducto)
 
     //eliminar y cambiar cantidad dentro del panel
     if(carrito){
@@ -55,6 +54,6 @@ function agregarProducto(evt){
     const boton=evt.target.closest('.agregar-carrito');
     if(boton){
         evt.preventDefault();
-        leerProducto(boton.parentElement.parentElement);
+        leerProducto(boton);
     }
 }
