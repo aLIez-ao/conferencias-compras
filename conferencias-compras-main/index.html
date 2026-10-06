@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+    <header id="header" class="header">
+    <div class="container">
+        <div class="navegacion">
+
+            <!-- Logotipo -->
+            <a href="index.html" class="logo">
+                <span class="logo-icono">C</span>
+                <span>Conferencify</span>
+            </a>
+
+            <!-- Menú de navegación -->
+            <nav class="menu-principal">
+                <a href="index.html" class="enlace_inicio">Inicio</a>
+                <a href="#lista-conferencias" class="enlace_conferencias">Conferencias</a>
+                <a href="#footer" class="enlace_footer">Acerca de</a>
+            </nav>
+
+            <!-- Carrito -->
+            <div class="acciones-header">
+                <ul>
+                    <li class="submenu">
+                        <button id="img-carrito" class="boton-carrito"
+                            aria-label="Abrir carrito">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M7 20c-1.1 0-1.99.9-1.99 2S5.9 24 7 24s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0020 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                            </svg>
+                            <span id="badge-carrito">0</span>
+                        </button>
+
+                        <!-- Panel desplegable del carrito -->
+                        <div id="carrito">
+                            <div id="lista-carrito"></div>
+                            <p id="total-carrito">Total: $0</p>
+                            <a href="#" id="pagar"
+                                class="button u-full-width">Pagar</a>
+                            <a href="pages/carrito.html"
+                                class="button u-full-width">Ver carrito</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+
+
+    <div id="hero"> <!-- seccion principal con el logo -->
+        <div class="container">
+            <div class="row">
+                <div class="six columns">
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- TÍTULO DE LA SECCIÓN -->
+<div id="titulo-conferencias">
+    <div class="container">
+        <h1>
+            Conferencias 
+            <span class="badge text-bg-secondary">ACTUALES</span>
+        </h1>
+
+        <p class="subtitulo">
+            Ideas que inspiran, conocimiento que transforma
+        </p>
+    </div>
+</div>
+
+
+<div id="lista-conferencias" class="container">
+    <div class="titulo-seccion">
+        <h1 id="encabezado" class="encabezado">
+            Conferencias disponibles
+        </h1>
+        <p>
+            Descubre nuestras conferencias y encuentra la que más te interese.
+        </p>
+    </div>
+
+    <div class="row">
+    <!-- CONFERENCIA 1 -->
+        <div class="four columns">
+            <div class="card">            
+                <!-- Envolvemos la imagen con el enlace -->
+                <a href="pages/conferencia1.html">
+                    <div class="imagen-conferencia">
+                        <img src="img/conferencia1.jpg" class="imagen-curso u-full-width">
+                    </div>
+                </a>
+                <div class="info-card">
+                    <!-- Envolvemos el título con el enlace -->
+                    <a href="pages/conferencia1.html" style="text-decoration: none; color: inherit;">
+                        <h4>Fisica al 100. Netflix y automatizacion.    </h4>
+                    </a>
+                    <p class="ponente">
+                        DAVID JAIME GONZALES MAXINES
+                    </p>
+                    <span class="estrellas">
+                        ★★★★★
+                    </span>
+                    <div class="precio">
+                        <span class="precio-anterior">$100</span>
+                        <span class="precio-actual">$75</span>
+                    </div>
+                    <!-- El botón de carrito se mantiene intacto -->
+                    <a href="#" class="u-full-width button agregar-carrito" data-id="1">
+                        Agregar al carrito
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONFERENCIA 2 -->
+        <div class="four columns">
+            <div class="card">
+
+                <!-- Envolvemos la imagen con el enlace -->
+                <a href="pages/conferencias2.html">
+                    <div class="imagen-conferencia">
+                        <img src="img/conferencia2.jpg" class="imagen-curso u-full-width">
+                    </div>
+                </a>
+
+                <div class="info-card">
+                    <!-- Envolvemos el título con el enlace -->
+                    <a href="pages/conferencias2.html" style="text-decoration: none; color: inherit;">
+                        <h4>Futbol WorldCup bajo los datos: Lab.Macrodatos   </h4>
+                    </a>
+                    <p class="ponente">
+                        EMMANUEL ORTEGA VENTURA
+                    </p>
+                    <span class="estrellas">
+                        ★★★★★
+                    </span>
+                    <div class="precio">
+                        <span class="precio-anterior">$300</span>
+                        <span class="precio-actual">$215</span>
+                    </div>
+                    <a href="#"
+                    class="u-full-width button agregar-carrito"
+                    data-id="2">
+                        Agregar al carrito
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONFERENCIA 3 -->
+        <div class="four columns">
+            <div class="card">
+
+                <!-- Envolvemos la imagen con el enlace -->
+                <a href="pages/conferencia3.html">
+                    <div class="imagen-conferencia">
+                        <img src="img/conferencia3.jpg" class="imagen-curso u-full-width">
+                    </div>
+                </a>
+
+                <div class="info-card">
+                    <!-- Envolvemos el título con el enlace -->
+                    <a href="pages/conferencia3.html" style="text-decoration: none; color: inherit;">
+                        <h4>Los videojuegos en la Ingenieria </h4>
+                    </a>
+                    <p class="ponente">
+                        JOSE FRANCISCO SALGADO RODRIGUEZ
+                    </p>
+                    <span class="estrellas">
+                        ★★★★★
+                    </span>
+                    <div class="precio">
+                        <span class="precio-anterior">$300</span>
+                        <span class="precio-actual">$215</span>
+                    </div>
+                    <a href="#"
+                    class="u-full-width button agregar-carrito"
+                    data-id="3">
+                        Agregar al carrito
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- pie de pagina -->
+
+    <footer id="footer" class="footer">
+    <div class="container">
+        <div class="row">
+            <p>© 2026 Conferencify. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="js/modelo-carrito.js"></script> <!-- modelo: estado y persistencia -->
+    <script src="js/vista-carrito.js"></script> <!-- vista: render del carrito -->
+    <script src="js/app.js"></script> <!-- app: eventos y arranque -->
+
+</body>
+
+</html>

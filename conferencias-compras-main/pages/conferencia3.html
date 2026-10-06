@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Conferencia 3</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+<link rel="stylesheet" href="../css/skeleton.css">
+<link rel="stylesheet" href="../css/custom.css">
+
+<body>
+    <header id="header" class="header">
+        <div class="container">
+            <div class="navegacion">
+                <!-- Logotipo -->
+                <a href="../index.html" class="logo">
+                    <span class="logo-icono">C</span>
+                    <span>Conferencify</span>
+                </a>
+
+                <!-- Menú de navegación -->
+                <nav class="menu-principal">
+                    <a href="../index.html" class="enlace_inicio">Inicio</a>
+                    <a href="../index.html#lista-conferencias" class="enlace_conferencias">Conferencias</a>
+                    <a href="#footer" class="enlace_footer">Acerca de</a>
+                </nav>
+
+                <!-- Carrito -->
+                <div class="acciones-header">
+                    <ul>
+                        <li class="submenu">
+                            <button id="img-carrito" class="boton-carrito" aria-label="Abrir carrito">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M7 20c-1.1 0-1.99.9-1.99 2S5.9 24 7 24s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0020 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                                </svg>
+                                <span id="badge-carrito">0</span>
+                            </button>
+
+                            <!-- Panel desplegable del carrito -->
+                            <div id="carrito">
+                                <div id="lista-carrito"></div>
+                                <p id="total-carrito">Total: $0</p>
+                                <a href="#" id="pagar" class="button u-full-width">Pagar</a>
+                                <a href="pages/carrito.html" class="button u-full-width">Ver carrito</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECCIÓN DE DETALLE DE LA CONFERENCIA -->
+    <div class="container detalle-conferencia">
+        <div class="row">
+            
+            <!-- Columna Izquierda: Información de la Conferencia -->
+            <div class="eight columns">
+                <img src="../img/conferencia3.jpg" alt="Conferencia 3" class="u-full-width" style="border-radius: 8px; margin-bottom: 20px;">
+                
+                <h1 class="titulo-detalle">Los videojuegos en la Ingenieria</h1>
+                <p class="ponente-detalle">Impartido por: Ing. José Francisco Salgado Rodríguez</p>
+                
+                <h3>Acerca de esta conferencia</h3>
+                <p>Cualquiera pensaria que programar videojuegos no te dejara nada en
+                    la vida o sera muy complicado dedicarse a eso en vez de otras ramas de la ingenieria
+                    en computacion, pero gracias al Maestro Jose y sus 4 alumnos nos demuestran que es
+                    todo lo contrario.
+                    2 alumnos nos platican como realizaron un juego parecido a flappybird junto con su
+                    soundtrack y todo desde 0 siendo un trabajo impresionante de ingenieria.
+                    Sus otros 2 alumnos nos platican como en su programa de intercambio hacia corea del
+                    sur les enseniaron temas de programacion enfocados al desarrollo de videjuegos y al
+                    mismo tiempo vivieron una experiencia muy grata y conocieron un pais con gran
+                    influencia en temas enfocados a tecnologia.</p>
+                
+                <h3 style="margin-top: 40px;">Reseñas de asistentes (3)</h3>
+                <div class="resenas-contenedor">
+                    <!-- Reseña 1 -->
+                    <div class="resena-box">
+                        <span class="estrellas-detalle">★★★★★</span>
+                        <strong>Javier R.</strong> <span style="color: #888; font-size: 0.9rem;">- Hace 5 dias</span>
+                        <p style="margin-bottom: 0;">Entré con dudas sobre si los videojuegos eran una especialidad viable, pero escuchar la experiencia del intercambio a Corea del Sur me inspiró muchísimo. ¡Una plática súper motivadora para los que estudiamos computación!</p>
+                    </div>
+                    <!-- Reseña 2 -->
+                    <div class="resena-box">
+                        <span class="estrellas-detalle">★★★★☆</span>
+                        <strong>Brenda M.</strong> <span style="color: #888; font-size: 0.9rem;">- Hace 1 semana</span>
+                        <p style="margin-bottom: 0;">Ver cómo desarrollaron ese juego tipo Flappy Bird desde cero, incluyendo el soundtrack, me voló la cabeza. El Maestro José realmente sabe cómo guiar a sus alumnos en proyectos reales y complejos de ingeniería.</p>
+                    </div>
+                    <!-- Reseña 3 -->
+                    <div class="resena-box">
+                        <span class="estrellas-detalle">★★★★★</span>
+                        <strong>Andres C.</strong> <span style="color: #888; font-size: 0.9rem;">- Hace 2 semanas</span>
+                        <p style="margin-bottom: 0;">Excelente conferencia y gran demostración de talento. Solo le doy 4 estrellas porque me habría encantado que profundizaran un poco más en el código o las herramientas de programación específicas que aprendieron a usar en Asia.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Tarjeta de Compra Fija -->
+            <div class="four columns">
+                <div class="tarjeta-compra">
+                    <h4 style="text-align: center; margin-bottom: 25px;">Detalles del Evento</h4>
+                    
+                    <ul class="lista-detalles">
+                        <li><strong>📍 Lugar:</strong> Auditorio DUACyD FES Aragón, UNAM</li>
+                        <li><strong>📅 Fecha:</strong> Lunes, 21 de Septiembre</li>
+                        <li><strong>⏰ Horario:</strong> 12:30 PM - 1:30 PM </li>
+                        <li><strong>👥 Cupo:</strong> Limitado a 50 personas</li>
+                    </ul>
+
+                    <div class="precio-caja">
+                        <span class="precio-anterior">$100</span>
+                        <span class="precio-actual">$75</span>
+                    </div>
+
+                    <!-- El botón mantiene tus clases y data-id para que funcione tu carrito JS -->
+                    <a href="#" class="u-full-width button agregar-carrito btn-comprar" data-id="1">
+                        Agregar al carrito
+                    </a>
+                    <p style="text-align: center; font-size: 0.8rem; color: #888; margin-top: 10px;">Garantía de reembolso de 7 días</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Pie de pagina -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="row">
+                <p>© 2026 Conferencify. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/modelo-carrito.js"></script>
+    <script src="js/vista-carrito.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>

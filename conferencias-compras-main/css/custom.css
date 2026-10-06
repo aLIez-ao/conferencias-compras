@@ -1,0 +1,630 @@
+html {
+    font-size: 65%;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: #F8FAFC;
+    color: #C9A227; /* Color de texto CONFERENCIAS ACTUALES */
+}
+
+h1 {
+    text-align: center;
+}
+h2 {
+    font-size: 3rem;
+}
+h4 {
+    font-size: 16px;
+    font-weight: 700;
+}
+/* HEADER */
+.header {
+    background-color: #0F172A;
+    padding: 0;
+    border-bottom: 1px solid #0000000e;
+    position: sticky;
+    z-index: 300;
+}
+
+/* CONTENEDOR DE NAVEGACIÓN */
+.navegacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 85px;
+    gap: 25px;
+}
+
+/* LOGOTIPO */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #C9A227;
+    font-size: 2.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.logo:hover {
+    color: #7357f6;
+}
+
+.logo-icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background: #7357f6;
+    color: white;
+    font-size: 2.2rem;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+/* MENÚ PRINCIPAL */
+.menu-principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.enlace_inicio {
+    color: #C9A227;
+    font-size: 1.45rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.enlace_inicio:hover,
+.enlace_inicio:focus {
+    color: #7357f6;
+}
+
+.enlace_conferencias {
+    color: #C9A227;
+    font-size: 1.45rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.enlace_conferencias:hover,
+.enlace_conferencias:focus {
+    color: #7357f6;
+}
+
+.enlace_footer {
+    color: #C9A227;
+    font-size: 1.45rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.enlace_footer:hover,
+.enlace_footer:focus {
+    color: #7357f6;
+}
+
+/* ACCIONES DEL HEADER */
+.acciones-header {
+    display: flex;
+    align-items: center;
+}
+
+.acciones-header ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* TÍTULO DE LA SECCIÓN */
+
+#titulo-conferencias {
+    text-align: center;
+    padding: 25px 0 15px;
+}
+
+#titulo-conferencias h1 {
+    margin-bottom: 5px;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.subtitulo {
+    font-size: 2rem;
+    color: #000000;
+    margin-top: 0;
+}
+
+/*Lista conferencias*/
+#lista-conferencias {
+    background-color: #FFFFFF;
+    padding: 45px 35px;
+    margin-top: 35px;
+    margin-bottom: 50px;
+    border-radius: 18px;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+/* TÍTULO DE LA SECCIÓN */
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.titulo-seccion h1 {
+    color: #C9A227;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.titulo-seccion p {
+    color: #64748B;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* ========================================
+TARJETAS
+======================================== */
+
+.card {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(15, 23, 42, 0.08);
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+}
+
+/* Efecto al pasar el mouse */
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(15, 23, 42, 0.15);
+    border-color: #C9A227;
+}
+
+/* ========================================
+IMAGEN
+======================================== */
+
+.imagen-conferencia {
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    background-color: #F8FAFC;
+}
+
+.imagen-conferencia img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* Zoom de la imagen */
+
+.card:hover .imagen-conferencia img {
+    transform: scale(1.04);
+}
+
+/* ========================================
+INFORMACIÓN
+======================================== */
+
+.info-card {
+    padding: 22px;
+}
+
+.info-card h4 {
+    color: #0F172A;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+
+.ponente {
+    color: #64748B;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+
+/* ========================================
+ESTRELLAS
+======================================== */
+
+.estrellas {
+    color: #C9A227;
+    font-size: 18px;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+
+/* ========================================
+PRECIOS
+======================================== */
+
+.precio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0 20px;
+}
+
+.precio-anterior {
+    color: #64748B;
+    text-decoration: line-through;
+    font-size: 17px;
+}
+
+.precio-actual {
+    color: #0F172A;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+/* ========================================
+BOTÓN
+======================================== */
+
+.agregar-carrito {
+
+    background-color: #0F172A;
+    color: #FFFFFF !important;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.agregar-carrito:hover {
+    background-color: #C9A227;
+    color: #0F172A !important;
+    border-color: #C9A227;
+}
+
+/* Estilos específicos para la página de detalles de la conferencia */
+.detalle-conferencia {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.titulo-detalle {
+    color: #1a1a2e;
+    margin-bottom: 5px;
+}
+
+.ponente-detalle {
+    color: #bfa15f;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.resena-box {
+    border-bottom: 1px solid #e1e1e1;
+    padding: 15px 0;
+}
+
+.resena-box:last-child {
+    border-bottom: none;
+}
+
+.estrellas-detalle {
+    color: #bfa15f;
+    font-size: 1.5rem;
+}
+
+.tarjeta-compra {
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    padding: 25px;
+    background-color: #fdfdfd;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+}
+
+.lista-detalles {
+    list-style: none;
+    margin-left: 0;
+    font-size: 1.1rem;
+}
+
+.lista-detalles li {
+    margin-bottom: 12px;
+}
+
+.precio-caja {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.precio-caja .precio-anterior {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 1.6rem;
+    margin-right: 15px;
+}
+
+.precio-caja .precio-actual {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #1a1a2e;
+}
+
+.btn-comprar {
+    background-color: #1a1a2e;
+    color: white;
+    border: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.2rem;
+    border-radius: 4px;
+}
+
+.btn-comprar:hover {
+    background-color: #bfa15f;
+    color: #1a1a2e;
+}
+
+
+
+
+
+
+
+
+
+@media (min-width: 750px) {
+    header {
+        text-align: left;
+    }
+}
+.borrar-curso {
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+}
+#hero {
+    background-image:url(../img/fes_logo3.jpg);
+    height: 350px;
+    background-position: center 40%;
+    background-size: cover;
+}
+#encabezado {
+    margin: 30px 0;
+}
+.submenu {
+    position: relative;
+}
+
+.submenu #carrito{
+    display: none;
+}
+#carrito.activo{
+    display: block;
+    position: absolute;
+    right:0;
+
+    top:100%;
+    z-index: 1;
+    background-color: white;
+    padding: 20px;
+    min-width: 320px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.2);
+}
+.boton-carrito{
+    position: relative;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+.boton-carrito svg{
+    width: 32px;
+    height: 32px;
+    fill: #741d51;
+}
+.boton-carrito.activo svg{
+    fill: #e44e52;
+}
+#badge-carrito{
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    min-width: 18px;
+    height: 18px;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#badge-carrito.oculto{
+    display: none;
+}
+#total-carrito,
+#total-detalle{
+    font-weight: 700;
+    font-size: 2rem;
+}
+.estrellas{
+    color: #f4c150;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+.item-carrito{
+    border-bottom: 1px solid #e1e1e1;
+    padding: 10px 0;
+    text-align: left;
+}
+.item-producto{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.item-producto h5{
+    margin: 0;
+    font-size: 14px;
+}
+.item-meta{
+    font-size: 12px;
+    color: #666;
+    margin: 5px 0;
+}
+.item-acciones{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+.modificador{
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.modificador button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 12px;
+    font-size: 16px;
+    line-height: 1;
+}
+.modificador .cantidad{
+    padding: 0 10px;
+    cursor: text;
+    font-weight: 700;
+}
+.modificador .icono-basura svg{
+    width: 14px;
+    height: 14px;
+    fill: #888;
+}
+.vacio {
+    padding: 10px;
+    background-color: crimson;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+}
+.contenido-hero {
+    margin-top: 80px;
+    color: white;
+}
+.contenido-hero form {
+    position: relative;
+    margin-bottom: 0;
+}
+.contenido-hero form #buscador {
+    height: 50px;
+    margin-bottom: 0;
+}
+.contenido-hero form .submit-buscador {
+    position: absolute;
+    right:0;
+    top:0;
+    height: 100%;
+    padding: 0;
+    display: block;
+    text-indent: -9999px;
+    width: 50px;
+    background-image: url(../img/lupa.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    border:none;
+}
+
+
+.barra {
+    padding: 20px 0;
+    background: #741d51; /* Old browsers */
+    background: -moz-linear-gradient(left, #741d51 0%, #e44e52 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #741d51 0%,#e44e52 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #741d51 0%,#e44e52 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 ); /* IE6-9 */
+}
+
+.barra p {
+    margin:0;
+    color: white;
+}
+.icono {
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 60px;
+    background-size: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+@media (min-width: 750px) {
+    .icono {
+        margin-bottom:0;
+    }
+}
+.icono1 {
+    background-image: url(../img/icono1.png);
+}
+.icono2 {
+    background-image: url(../img/icono2.png);
+}
+.icono3 {
+    background-image: url(../img/icono3.png);
+}
+
+#lista-cursos .row {
+    margin-bottom:20px;
+}
+.agregar-carrito {
+    margin:10px 0;
+}
+
+/*Pie de pagina*/
+
+.footer {
+    background-color: #0F172A;
+    color: #C9A227;
+    margin-top: 40px;
+    border-top: 1px solid #C9A227;
+    padding: 25px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1.4rem;
+}

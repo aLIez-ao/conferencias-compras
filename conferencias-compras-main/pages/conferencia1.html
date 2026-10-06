@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Conferencia 1</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+<link rel="stylesheet" href="../css/skeleton.css">
+<link rel="stylesheet" href="../css/custom.css">
+
+<body>
+    <header id="header" class="header">
+        <div class="container">
+            <div class="navegacion">
+                <!-- Logotipo -->
+                <a href="../index.html"  class="logo">
+                    <span class="logo-icono">C</span>
+                    <span>Conferencify</span>
+                </a>
+
+                <!-- Menú de navegación -->
+                <nav class="menu-principal">
+                    <a href="../index.html" class="enlace_inicio">Inicio</a>
+                    <a href="../index.html#lista-conferencias" class="enlace_conferencias">Conferencias</a>
+                    <a href="#footer" class="enlace_footer">Acerca de</a>
+                </nav>
+
+                <!-- Carrito -->
+                <div class="acciones-header">
+                    <ul>
+                        <li class="submenu">
+                            <button id="img-carrito" class="boton-carrito" aria-label="Abrir carrito">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M7 20c-1.1 0-1.99.9-1.99 2S5.9 24 7 24s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0020 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                                </svg>
+                                <span id="badge-carrito">0</span>
+                            </button>
+
+                            <!-- Panel desplegable del carrito -->
+                            <div id="carrito">
+                                <div id="lista-carrito"></div>
+                                <p id="total-carrito">Total: $0</p>
+                                <a href="#" id="pagar" class="button u-full-width">Pagar</a>
+                                <a href="pages/carrito.html" class="button u-full-width">Ver carrito</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECCIÓN DE DETALLE DE LA CONFERENCIA -->
+    <div class="container detalle-conferencia">
+        <div class="row">
+            
+            <!-- Columna Izquierda: Información de la Conferencia -->
+            <div class="eight columns">
+                <img src="../img/conferencia1.jpg" alt="Conferencia 1" class="u-full-width" style="border-radius: 8px; margin-bottom: 20px;">
+                
+                <h1 class="titulo-detalle">Fisica al 100. Netflix y automatizacion.</h1>
+                <p class="ponente-detalle">Impartido por: Ing. David Jaime Gonzales Maxines e Ing. Andres Ramirez Ursua</p>
+                
+                <h3>Acerca de esta conferencia</h3>
+                <p>El procedimiento para automatizar 100 escaladoras no es para nada
+                    sencillo, este proyecto nace a partir de un encargo hecho hacia el Maestro David para
+                    automatizar 4 escaladoras como fase de prueba, David realiza el trabajo en una
+                    protoboard como prueba, los anfitriones al ver que David muestra poder automatizar las
+                    escaladoras le piden automatizar 100 para una serie donde participan grandes
+                    famosos, luchadores, influencer fitness, entre otros para demostrar quien de los 100 es
+                    el mejor. Esta es la primera fase y el trabajo tuvo que realizarse en escasos dias, con la
+                    ayuda de Andres y un chico de la FES aragon en servicio social. Las herramientas
+                    utilizadas para realizar este trabajo fueron placas pcb hechas desde 0 conectadas con
+                    arduino mega, software como autocad y cableado escondido en una piramide de 4
+                    pisos en tan solo 20 dias aprox.</p>
+                
+                <h3 style="margin-top: 40px;">Reseñas de asistentes (3)</h3>
+                <div class="resenas-contenedor">
+                    <!-- Reseña 1 -->
+                    <div class="resena-box">
+                        <span class="estrellas-detalle">★★★★★</span>
+                        <strong>Carlos Hernández</strong> <span style="color: #888; font-size: 0.9rem;">- Hace 2 semanas</span>
+                        <p style="margin-bottom: 0;">El Instructor explica de maravilla. Pude entender conceptos que en la escuela me costaron meses. ¡Muy recomendado!</p>
+                    </div>
+                    <!-- Reseña 2 -->
+                    <div class="resena-box">
+                        <span class="estrellas-detalle">★★★★☆</span>
+                        <strong>Mariana R.</strong> <span style="color: #888; font-size: 0.9rem;">- Hace 1 mes</span>
+                        <p style="margin-bottom: 0;">Muy buena forma de llamarnos la atención. La única razón por la que no le doy 5 estrellas es porque me habría gustado más tiempo de preguntas.</p>
+                    </div>
+                    <!-- Reseña 3 -->
+                    <div class="resena-box">
+                        <span class="estrellas-detalle">★★★★★</span>
+                        <strong>Luis G.</strong> <span style="color: #888; font-size: 0.9rem;">- Hace 2 meses</span>
+                        <p style="margin-bottom: 0;">Excelente ambiente y organización. Las instalaciones son muy cómodas y el material de apoyo es de primera calidad.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Tarjeta de Compra Fija -->
+            <div class="four columns">
+                <div class="tarjeta-compra">
+                    <h4 style="text-align: center; margin-bottom: 25px;">Detalles del Evento</h4>
+                    
+                    <ul class="lista-detalles">
+                        <li><strong>📍 Lugar:</strong> Auditorio CTA  FES Aragón, UNAM </li>
+                        <li><strong>📅 Fecha:</strong> Martes, 22 de Septiembre</li>
+                        <li><strong>⏰ Horario:</strong> 1:30 PM - 2:30 PM </li>
+                        <li><strong>👥 Cupo:</strong> Limitado a 50 personas</li>
+                    </ul>
+
+                    <div class="precio-caja">
+                        <span class="precio-anterior">$100</span>
+                        <span class="precio-actual">$75</span>
+                    </div>
+
+                    <!-- El botón mantiene tus clases y data-id para que funcione tu carrito JS -->
+                    <a href="#" class="u-full-width button agregar-carrito btn-comprar" data-id="1">
+                        Agregar al carrito
+                    </a>
+                    <p style="text-align: center; font-size: 0.8rem; color: #888; margin-top: 10px;">Garantía de reembolso de 7 días</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Pie de pagina -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="row">
+                <p>© 2026 Conferencify. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/modelo-carrito.js"></script>
+    <script src="js/vista-carrito.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
