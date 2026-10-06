@@ -3,6 +3,8 @@ import { itemsCarrito, totalCarrito } from './modelo-carrito.js';
 
 const listaCarritoEl=document.querySelector('#lista-carrito'); //contenedor del panel
 const listaDetalleEl=document.querySelector('#lista-carrito-detalle'); //contenedor de la pagina detalle
+//ruta absoluta del bote para que funcione tanto en / como en /pages/
+const iconoBasura=new URL('../img/bote-basura.svg',import.meta.url).href;
 
 //generar el HTML de la lista y actualizar total y badge
 export function htmlCarrito(){
@@ -10,7 +12,7 @@ export function htmlCarrito(){
         const {imagen,nombre,lugar,hora,precio,cantidad,id}=item;
         //excepcion: si cantidad es 1, el boton - se cambia por un bote de basura
         const botonMenos = cantidad === 1
-            ? `<button class="menos icono-basura" data-id="${id}" title="Eliminar"><img src="img/bote-basura.svg" alt="Eliminar"></button>`
+            ? `<button class="menos icono-basura" data-id="${id}" title="Eliminar"><img src="${iconoBasura}" alt="Eliminar"></button>`
             : `<button class="menos" data-id="${id}">-</button>`;
         return `
         <div class="item-carrito">

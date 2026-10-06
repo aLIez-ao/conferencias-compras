@@ -531,10 +531,9 @@ ul {
     cursor: text;
     font-weight: 700;
 }
-.modificador .icono-basura svg{
+.modificador .icono-basura img{
     width: 14px;
     height: 14px;
-    fill: #888;
 }
 .vacio {
     padding: 10px;
