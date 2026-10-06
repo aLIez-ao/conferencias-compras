@@ -1,5 +1,5 @@
-# Tienda de libros del profesor
-tienda de libros. presenta libros en mosaico con portada y precio (similar a amazon) con header que muetsra el carrito que
+# Tienda de productos del profesor
+tienda de productos. presenta productos en mosaico con portada y precio (similar a amazon) con header que muetsra el carrito que
 desplega un menu con opciones sobre el carrito y productos en el.
 
 # proyecto 12/10

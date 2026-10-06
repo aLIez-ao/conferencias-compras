@@ -67,7 +67,7 @@ Se eliminó `js/codigo.js`.
 - Total en negritas y más grande (`#total-carrito`, `#total-detalle`: `font-weight: 700; font-size: 2rem`).
 - Archivos reorganizados: solo `index.html` en la raíz; `carrito.html` movido a `pages/`; lógica dividida en `js/modelo-carrito.js`, `js/vista-carrito.js` y `js/app.js`.
 - Corregido: al cambiar cantidad el panel del carrito se cerraba (el re-render desprendía el nodo clickeado y el handler de "click fuera" lo contaba como fuera). Se agregó `evt.stopPropagation()` en los botones manejados.
-- Corregido: "Seguir comprando" en `pages/carrito.html` no navegaba porque `agregarLibro` hacía `preventDefault()` para cualquier click; ahora solo previene cuando el click es sobre un botón "agregar al carrito".
+- Corregido: "Seguir comprando" en `pages/carrito.html` no navegaba porque `agregarProducto` hacía `preventDefault()` para cualquier click; ahora solo previene cuando el click es sobre un botón "agregar al carrito".
 
 ## Pendiente / notas
 

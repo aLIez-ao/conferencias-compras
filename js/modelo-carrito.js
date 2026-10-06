@@ -18,29 +18,29 @@ export function cargarCarrito(){
 }
 
 //leer los datos de un producto y agregarlo (o sumar cantidad si ya existe)
-export function leerLibro(libro){
-    const libroInfo={
-        imagen:libro.querySelector('img').src,
-        nombre: libro.querySelector('h4').textContent,
-        lugar: libro.querySelector('[data-lugar]')?.textContent || libro.dataset?.lugar || '',
-        hora: libro.querySelector('[data-hora]')?.textContent || libro.dataset?.hora || '',
-        precio: Number(libro.querySelector('.precio span').textContent.replace('$','').trim()),
-        id: libro.querySelector('a').getAttribute('data-id'),
+export function leerProducto(producto){
+    const productoInfo={
+        imagen:producto.querySelector('img').src,
+        nombre: producto.querySelector('h4').textContent,
+        lugar: producto.querySelector('[data-lugar]')?.textContent || producto.dataset?.lugar || '',
+        hora: producto.querySelector('[data-hora]')?.textContent || producto.dataset?.hora || '',
+        precio: Number(producto.querySelector('.precio span').textContent.replace('$','').trim()),
+        id: producto.querySelector('a').getAttribute('data-id'),
         cantidad: 1
     }
 
-    const existe=itemsCarrito.some(libro=>String(libro.id)===String(libroInfo.id));
+    const existe=itemsCarrito.some(producto=>String(producto.id)===String(productoInfo.id));
 
     //si ya existe solo se aumenta la cantidad
     if(existe){
-        itemsCarrito=itemsCarrito.map(libro=>{
-            if(String(libro.id)===String(libroInfo.id)){
-                return {...libro,cantidad:libro.cantidad+1};
+        itemsCarrito=itemsCarrito.map(producto=>{
+            if(String(producto.id)===String(productoInfo.id)){
+                return {...producto,cantidad:producto.cantidad+1};
             }
-            return libro;
+            return producto;
         });
     }else{
-        itemsCarrito=[...itemsCarrito,libroInfo]
+        itemsCarrito=[...itemsCarrito,productoInfo]
     }
 
     guardarCarrito();
@@ -48,13 +48,13 @@ export function leerLibro(libro){
 }
 
 //eliminar un item del carrito por su id
-export function eliminarLibro(evt){
+export function eliminarProducto(evt){
     const boton=evt.target.closest('.borrar-curso');
     if(boton){
         evt.preventDefault();
         evt.stopPropagation();
-        const libroId=boton.getAttribute('data-id');
-        itemsCarrito=itemsCarrito.filter(libro=>String(libro.id)!==String(libroId))
+        const productoId=boton.getAttribute('data-id');
+        itemsCarrito=itemsCarrito.filter(producto=>String(producto.id)!==String(productoId))
         guardarCarrito();
         htmlCarrito();
     }

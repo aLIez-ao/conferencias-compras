@@ -6,8 +6,8 @@
 
 Actualmente el proyecto es una página estática con:
 
-- `index.html`: listado tipo mosaico de productos (libros) con tarjetas, carrito en el header y footer.
-- `js/codigo.js`: lógica vanilla del carrito (`itemsCarrito`, `agregarLibro`, `eliminarLibro`, `HtmlCarrtio`).
+- `index.html`: listado tipo mosaico de productos (productos) con tarjetas, carrito en el header y footer.
+- `js/codigo.js`: lógica vanilla del carrito (`itemsCarrito`, `agregarProducto`, `eliminarProducto`, `HtmlCarrtio`).
 - `css/`: `normalize.css`, `skeleton.css`, `custom.css`.
 - `docs/notas.md`: definición del proyecto — publicidad de conferencias (3), reseñas, tickets, nombre de conferencia, lugar, hora, precio, total, pago con ventana emergente y confirmación.
 
@@ -39,8 +39,8 @@ El TODO asigna estas necesidades y responsables:
 3. Extraer eventos a `registrarListener()` existente: agregar, eliminar, cambiar cantidad (+/−), vaciar.
 4. Calcular y mostrar **total** en el submenu del carrito.
 5. Corregir/limpiar puntos del código actual:
-   - `eliminarLibro` compara `libro.id !== libroId` (string vs number) — normalizar tipos.
-   - `precio: libro.querySelector('.precio span').textContent` mantiene el `$`; parsear a número para sumar totales.
+   - `eliminarProducto` compara `producto.id !== productoId` (string vs number) — normalizar tipos.
+   - `precio: producto.querySelector('.precio span').textContent` mantiene el `$`; parsear a número para sumar totales.
    - Renombrar `HtmlCarrtio()` → `htmlCarrito()` y `limpiarHTNL()` → `limpiarHTML()`.
 6. Validar stock/límite por conferencia si aplica.
 
