@@ -1,9 +1,11 @@
 //vista: render del carrito y badge
+import { itemsCarrito, totalCarrito } from './modelo-carrito.js';
+
 const listaCarritoEl=document.querySelector('#lista-carrito'); //contenedor del panel
 const listaDetalleEl=document.querySelector('#lista-carrito-detalle'); //contenedor de la pagina detalle
 
 //generar el HTML de la lista y actualizar total y badge
-function htmlCarrito(){
+export function htmlCarrito(){
     const html=itemsCarrito.map(item=>{
         const {imagen,nombre,lugar,hora,precio,cantidad,id}=item;
         //excepcion: si cantidad es 1, el boton - se cambia por un bote de basura

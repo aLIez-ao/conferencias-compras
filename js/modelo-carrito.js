@@ -1,13 +1,15 @@
 //modelo: estado del carrito y persistencia
-let itemsCarrito=[]; //lista de items del carrito
+import { htmlCarrito } from './vista-carrito.js';
+
+export let itemsCarrito=[]; //lista de items del carrito
 
 //guardar el carrito en localStorage
-function guardarCarrito(){
+export function guardarCarrito(){
     localStorage.setItem('carrito',JSON.stringify(itemsCarrito));
 }
 
 //cargar el carrito desde localStorage al iniciar
-function cargarCarrito(){
+export function cargarCarrito(){
     const datos=JSON.parse(localStorage.getItem('carrito'));
     if(datos){
         itemsCarrito=datos;
@@ -16,7 +18,7 @@ function cargarCarrito(){
 }
 
 //leer los datos de un producto y agregarlo (o sumar cantidad si ya existe)
-function leerLibro(libro){
+export function leerLibro(libro){
     const libroInfo={
         imagen:libro.querySelector('img').src,
         nombre: libro.querySelector('h4').textContent,
@@ -46,7 +48,7 @@ function leerLibro(libro){
 }
 
 //eliminar un item del carrito por su id
-function eliminarLibro(evt){
+export function eliminarLibro(evt){
     const boton=evt.target.closest('.borrar-curso');
     if(boton){
         evt.preventDefault();
@@ -59,7 +61,7 @@ function eliminarLibro(evt){
 }
 
 //sumar o restar cantidad de un item (si llega a 0 se elimina)
-function cambiarCantidad(evt){
+export function cambiarCantidad(evt){
     const boton=evt.target.closest('button');
     if(!boton) return;
     const id=boton.getAttribute('data-id');
@@ -81,13 +83,13 @@ function cambiarCantidad(evt){
 }
 
 //vaciar todo el carrito
-function vaciarCarrito(){
+export function vaciarCarrito(){
     itemsCarrito=[];
     guardarCarrito();
     htmlCarrito();
 }
 
 //calcular el total a pagar
-function totalCarrito(){
+export function totalCarrito(){
     return itemsCarrito.reduce((acum,item)=>acum+item.precio*item.cantidad,0);
 }

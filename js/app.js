@@ -1,4 +1,6 @@
 //app: eventos y arranque
+import { cargarCarrito, vaciarCarrito, eliminarLibro, cambiarCantidad, leerLibro } from './modelo-carrito.js';
+
 const carrito=document.querySelector('#carrito'); //panel del carrito
 const vaciarCarritoB=document.querySelector('#vaciar-carrito') //boton vaciar
 const listaLibros=document.querySelector('#lista-libros') //contenedor de productos
