@@ -450,13 +450,14 @@ ul {
     padding: 0;
     cursor: pointer;
 }
-.boton-carrito svg{
+/* el icono viene de img/carrito-icon.svg, asi que el color va dentro del svg y aqui solo se reescala */
+.boton-carrito img{
     width: 32px;
     height: 32px;
-    fill: #741d51;
 }
-.boton-carrito.activo svg{
-    fill: #e44e52;
+/* al abrir el panel el icono pasa de #741d51 a #e44e52 */
+.boton-carrito.activo img{
+    filter: hue-rotate(34deg) brightness(1.8);
 }
 #badge-carrito{
     position: absolute;
