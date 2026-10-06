@@ -17,15 +17,28 @@ export function cargarCarrito(){
     }
 }
 
-//leer los datos de un producto y agregarlo (o sumar cantidad si ya existe)
-export function leerProducto(producto){
+//leer los datos de un producto desde su boton y agregarlo (o sumar cantidad si ya existe)
+export function leerProducto(boton){
+    //tarjeta que envuelve el boton, y contenedor de la pagina como respaldo
+    const tarjeta=boton.closest('.card, .tarjeta-compra') || boton.parentElement;
+    const contenedor=tarjeta.closest('.container') || document;
+    const precioTexto=boton.dataset.precio
+        || tarjeta.querySelector('.precio-actual')?.textContent
+        || tarjeta.querySelector('.precio span')?.textContent
+        || '';
     const productoInfo={
-        imagen:producto.querySelector('img').src,
-        nombre: producto.querySelector('h4').textContent,
-        lugar: producto.querySelector('[data-lugar]')?.textContent || producto.dataset?.lugar || '',
-        hora: producto.querySelector('[data-hora]')?.textContent || producto.dataset?.hora || '',
-        precio: Number(producto.querySelector('.precio span').textContent.replace('$','').trim()),
-        id: producto.querySelector('a').getAttribute('data-id'),
+        imagen: boton.dataset.imagen
+            || tarjeta.querySelector('img')?.src
+            || contenedor.querySelector('img')?.src
+            || '',
+        nombre: (boton.dataset.nombre
+            || tarjeta.querySelector('.info-card h4')?.textContent
+            || contenedor.querySelector('h1')?.textContent
+            || '').trim(),
+        lugar: boton.dataset.lugar || tarjeta.querySelector('[data-lugar]')?.textContent?.trim() || '',
+        hora: boton.dataset.hora || tarjeta.querySelector('[data-hora]')?.textContent?.trim() || '',
+        precio: Number(String(precioTexto).replace('$','').trim()),
+        id: boton.getAttribute('data-id'),
         cantidad: 1
     }
 
