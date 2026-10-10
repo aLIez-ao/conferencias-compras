@@ -390,6 +390,227 @@ BOTÓN
     color: #1a1a2e;
 }
 
+.stats-container {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 100px; /* Incrementado para dar más espacio entre ítems */
+margin: 40px auto;
+padding: 25px 0; /* Mayor espacio vertical interno */
+max-width: 800px; /* Ampliado para acomodar el texto más grande */
+border-top: 2px solid #eee; /* Borde ligeramente más grueso */
+border-bottom: 2px solid #eee;
+}
+
+.stat-item {
+text-align: center;
+}
+
+.stat-number {
+display: block;
+font-size: 4rem; /* Aumentado de 1.4rem a 2.2rem */
+font-weight: bold;
+color: #c5a059;
+line-height: 1.2; /* Previene superposiciones en texturas grandes */
+margin-bottom: 5px;
+}
+
+.stat-label {
+font-size: 1.1rem; 
+color: #666;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+}
+
+
+/* Modales Nativa <dialog> */
+dialog.modal-pago {
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+
+dialog.modal-pago::backdrop {
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(3px);
+}
+
+.modal-contenido {
+  padding: 25px;
+  background: #fff;
+  position: relative;
+  color: #333;
+}
+
+.btn-cerrar {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #888;
+}
+
+.resumen-total {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.resumen-total strong {
+  color: #c5a059;
+}
+
+/* Tabs Método de Pago */
+.metodos-pago-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tab-metodo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.tab-metodo:has(input:checked) {
+  border-color: #c5a059;
+  background-color: #fdfbf7;
+  font-weight: bold;
+}
+
+/* Secciones de Formulario */
+.seccion-metodo {
+  display: none;
+}
+
+.seccion-metodo.activo {
+  display: block;
+}
+
+.campo-grupo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.campo-grupo label {
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+  color: #555;
+  text-align: left;
+}
+
+.campo-grupo input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.campo-fila {
+  display: flex;
+  gap: 12px;
+}
+
+.campo-fila .campo-grupo {
+  flex: 1;
+}
+
+.datos-banco, .info-pago {
+  background: #f8f9fa;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/* Botones y Alertas */
+.btn-pagar-main {
+  width: 100%;
+  padding: 12px;
+  background-color: #c5a059;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-pagar-main:hover {
+  background-color: #b08d46;
+}
+
+.btn-pagar-main:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.mensaje-pago {
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.mensaje-pago.error {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.mensaje-pago.info {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Modal Confirmación */
+.text-center {
+  text-align: center;
+}
+
+.icono-resultado {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.icono-resultado.exito {
+  color: #28a745;
+}
+
+.icono-resultado.error {
+  color: #dc3545;
+}
+
+.detalles-orden {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px 0 20px;
+  text-align: left;
+}
 
 
 
@@ -397,6 +618,7 @@ BOTÓN
 
 
 
+/* */
 
 @media (min-width: 750px) {
     header {
