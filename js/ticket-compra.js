@@ -46,8 +46,8 @@ function registrarListener() {
 
     // Control del botón y panel desplegable de TICKET en el Header
     if (btnMenuTicketGen && panelTicketGen) {
-        btnMenuTicketGen.addEventListener('click', (e) => {
-            e.stopPropagation();
+        btnMenuTicketGen.addEventListener('click', (evt) => {
+            evt.stopPropagation();
             
             // Si el carrito está abierto, lo cerramos
             if (carrito) carrito.classList.remove('activo');
@@ -109,7 +109,7 @@ function cargarInfoTicketGenMenu() {
         if (!isNaN(fechaObj)) {
             fechaLegible = fechaObj.toLocaleString('es-MX', { dateStyle: 'medium', timeStyle: 'short' });
         }
-    } catch (e) {}
+    } catch (error) {}
 
     let listaItemsHtml = '';
     if (compra.items && compra.items.length > 0) {
