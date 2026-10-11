@@ -106,3 +106,10 @@ export function vaciarCarrito(){
 export function totalCarrito(){
     return itemsCarrito.reduce((acum,item)=>acum+item.precio*item.cantidad,0);
 }
+
+/**
+ * Obtener los productos actuales del carrito
+ */
+export function obtenerCarrito() {
+    return itemsCarrito;
+}
