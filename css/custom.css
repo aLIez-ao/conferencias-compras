@@ -799,7 +799,65 @@ ul {
 .agregar-carrito {
     margin:10px 0;
 }
+/*boton ticket*/
+.btn-ticketgen-estilo {
+    background-color: #C9A227;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 0 16px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    white-space: nowrap;
+    font-family: inherit;
+}
 
+.btn-ticketgen-estilo:hover {
+    background-color: #b08d1f;
+    transform: translateY(-2px);
+}
+
+.submenu-ticketgen-container {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* Panel flotante del ticket */
+.panel-ticketgen-flotante {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 300px;
+    background: #ffffff;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    padding: 15px;
+    z-index: 1000;
+    margin-top: 10px;
+    text-align: left;
+    color: #333;
+}
+
+.panel-ticketgen-flotante.activo {
+    display: block;
+}
+
+.panel-ticketgen-flotante h4 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #C9A227;
+}
+
+.panel-ticketgen-flotante p {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+}
 /*Pie de pagina*/
 
 .footer {
