@@ -591,12 +591,11 @@ dialog.modal-pago::backdrop {
     }
 }
 .borrar-curso {
-    background-color: red;
-    border-radius: 50%;
-    padding: 5px 10px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 10px;
+    line-height: 1;
 }
 
 ul {
@@ -729,73 +728,6 @@ ul {
     border-radius: 10px;
     color: white;
 }
-.contenido-hero {
-    margin-top: 80px;
-    color: white;
-}
-.contenido-hero form {
-    position: relative;
-    margin-bottom: 0;
-}
-.contenido-hero form #buscador {
-    height: 50px;
-    margin-bottom: 0;
-}
-.contenido-hero form .submit-buscador {
-    position: absolute;
-    right:0;
-    top:0;
-    height: 100%;
-    padding: 0;
-    display: block;
-    text-indent: -9999px;
-    width: 50px;
-    background-image: url(../img/lupa.png);
-    background-position: right center;
-    background-repeat: no-repeat;
-    border:none;
-}
-
-
-.barra {
-    padding: 20px 0;
-    background: #741d51; /* Old browsers */
-    background: -moz-linear-gradient(left, #741d51 0%, #e44e52 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #741d51 0%,#e44e52 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, #741d51 0%,#e44e52 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 ); /* IE6-9 */
-}
-
-.barra p {
-    margin:0;
-    color: white;
-}
-.icono {
-    background-repeat: no-repeat;
-    background-position: left center;
-    padding-left: 60px;
-    background-size: 30px;
-    margin-bottom: 40px;
-    text-align: center;
-}
-@media (min-width: 750px) {
-    .icono {
-        margin-bottom:0;
-    }
-}
-.icono1 {
-    background-image: url(../img/icono1.png);
-}
-.icono2 {
-    background-image: url(../img/icono2.png);
-}
-.icono3 {
-    background-image: url(../img/icono3.png);
-}
-
-#lista-cursos .row {
-    margin-bottom:20px;
-}
 .agregar-carrito {
     margin:10px 0;
 }
@@ -870,4 +802,205 @@ ul {
 .footer p {
     margin: 0;
     font-size: 1.4rem;
+}
+
+.equipo {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 25px;
+    margin: 12px 0 0;
+    padding: 0;
+    font-size: 1.3rem;
+}
+
+/* ========================================
+MOSAICO DE CONFERENCIAS (generado desde JSON)
+======================================== */
+
+.grid-conferencias {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.grid-conferencias .card {
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-conferencias .info-card {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.grid-conferencias .agregar-carrito {
+    margin-top: auto;
+}
+
+.enlace-card {
+    text-decoration: none;
+    color: inherit;
+}
+
+.badge.text-bg-secondary {
+    display: inline-block;
+    background-color: #C9A227;
+    color: #0F172A;
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 20px;
+    vertical-align: middle;
+}
+
+/* ========================================
+PAGINA DE DETALLE DE CONFERENCIA
+======================================== */
+
+.detalle-imagen {
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.subtitulo-resenas {
+    margin-top: 30px;
+}
+
+.resena-box .resena-tiempo {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.resena-box p {
+    margin-bottom: 0;
+}
+
+.garantia {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 10px;
+}
+
+.titulo-tarjeta-compra {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.conferencia-vacia {
+    text-align: center;
+    padding: 40px 20px;
+    color: #64748B;
+    font-size: 1.6rem;
+}
+
+/* ========================================
+PAGINA DEL CARRITO
+======================================== */
+
+.carrito-pagina {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    padding: 35px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.carrito-pagina #lista-carrito-detalle {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.carrito-resumen {
+    max-width: 720px;
+    margin: 20px auto 0;
+    text-align: right;
+    border-top: 1px solid #E2E8F0;
+    padding-top: 15px;
+}
+
+.carrito-resumen #total-detalle {
+    margin: 0;
+    color: #0F172A;
+}
+
+.carrito-acciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.btn-finalizar {
+    background-color: #C9A227;
+    color: #FFFFFF !important;
+    border-color: #C9A227;
+}
+
+.btn-finalizar:hover {
+    background-color: #b08d20;
+    border-color: #b08d20;
+    color: #FFFFFF !important;
+}
+
+.item-imagen {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* ========================================
+MODALES: confirmacion y ticket
+======================================== */
+
+.acciones-confirmacion {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-ver-ticket {
+    background-color: #333;
+}
+
+.btn-ver-ticket:hover {
+    background-color: #111;
+}
+
+.acciones-ticket {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* ========================================
+TICKET EN EL HEADER
+======================================== */
+
+#btn-menu-ticketgen {
+    cursor: pointer;
+    font-size: 1.45rem;
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 6px 14px;
+}
+
+@media (max-width: 750px) {
+    .navegacion {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        padding: 10px 0;
+    }
+    .panel-ticketgen-flotante {
+        right: auto;
+        left: 0;
+    }
 }
