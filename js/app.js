@@ -1,8 +1,10 @@
 // app: eventos y arranque
 import { cargarCarrito, vaciarCarrito, eliminarProducto, cambiarCantidad, leerProducto } from './modelo-carrito.js';
+import { cargarConferencias } from './datos-conferencias.js';
+import { renderListaConferencias, renderDetalleConferencia } from './vista-conferencias.js';
 import { obtenerCompra } from './pago.js';
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     const carrito = document.querySelector('#carrito'); // panel del carrito
     const vaciarCarritoB = document.querySelector('#vaciar-carrito'); // boton vaciar
     const botonCarrito = document.querySelector('#img-carrito'); // icono del carrito
@@ -14,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     registrarListener();
     cargarCarrito();
+    await inicializarPagina();
+    abrirPagoDesdeHash();
 
     // Registrar todos los eventos de la aplicación
     function registrarListener() {
@@ -39,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 evt.stopPropagation();
                 // Si el ticket está abierto, lo cerramos
                 if (panelTicketGen) panelTicketGen.classList.remove('activo');
-                
+
                 carrito.classList.toggle('activo');
                 botonCarrito.classList.toggle('activo');
             });
@@ -47,9 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Control del botón y panel desplegable de TICKET en el Header
         if (btnMenuTicketGen && panelTicketGen) {
-            btnMenuTicketGen.addEventListener('click', (e) => {
-                e.stopPropagation();
-                
+            btnMenuTicketGen.addEventListener('click', (evt) => {
+                evt.stopPropagation();
+
                 // Si el carrito está abierto, lo cerramos
                 if (carrito) carrito.classList.remove('activo');
                 if (botonCarrito) botonCarrito.classList.remove('activo');
@@ -78,6 +82,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (vaciarCarritoB) {
             vaciarCarritoB.addEventListener('click', vaciarCarrito);
         }
+
+        // Integracion con pago: cuando se confirma una orden, el carrito se vacia
+        document.addEventListener('ordenCreada', () => {
+            vaciarCarrito();
+        });
     }
 
     // Detectar click en "agregar al carrito" y leer el producto
@@ -87,6 +96,43 @@ document.addEventListener('DOMContentLoaded', () => {
             evt.preventDefault();
             leerProducto(boton);
         }
+    }
+
+    // Cargar el JSON y dibujar la pagina actual (mosaico del index o detalle)
+    async function inicializarPagina() {
+        const grid = document.querySelector('#grid-conferencias');
+        const detalle = document.querySelector('#detalle-conferencia');
+        if (!grid && !detalle) return; //paginas sin conferencias (p. ej. carrito)
+
+        try {
+            await cargarConferencias();
+        } catch (error) {
+            console.error(error);
+            const contenedor = grid || detalle;
+            if (contenedor) {
+                contenedor.innerHTML = `<p class="conferencia-vacia">No se pudieron cargar las conferencias.
+                    Ejecuta el proyecto con un servidor local (por ejemplo Live Server).</p>`;
+            }
+            return;
+        }
+
+        if (grid) renderListaConferencias();
+        if (detalle) {
+            const id = new URLSearchParams(window.location.search).get('id');
+            renderDetalleConferencia(id);
+        }
+    }
+
+    // Si llegamos desde "Finalizar compra" (#pagar), abrimos el modal de pago
+    function abrirPagoDesdeHash() {
+        if (window.location.hash !== '#pagar') return;
+        setTimeout(() => {
+            const boton = document.querySelector('.btn-pagar, #pagar');
+            if (boton) {
+                boton.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }));
+            }
+            history.replaceState(null, '', window.location.pathname + window.location.search);
+        }, 0);
     }
 
     // Función para cargar los datos del ticket desde localStorage en el panel superior
