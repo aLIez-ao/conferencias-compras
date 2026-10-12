@@ -1,5 +1,5 @@
 //vista: render del listado (index) y del detalle de una conferencia desde el JSON
-import { obtenerConferencias, obtenerConferencia, rutaImagen, rutaDetalle, promedioEstrellas } from './datos-conferencias.js';
+import { obtenerConferencias, obtenerConferencia, rutaImagen, rutaDetalle, rutaInicio, promedioEstrellas } from './datos-conferencias.js';
 
 //dibuja las estrellas rellenas/vacias de una calificacion (0 a 5)
 function estrellas(calificacion){
@@ -64,7 +64,7 @@ export function renderDetalleConferencia(id){
     if(!conf){
         contenedor.innerHTML = `<div class="conferencia-vacia"><h2>Conferencia no encontrada</h2>
             <p>La conferencia que buscas no existe o fue dada de baja.</p>
-            <a href="${document.querySelector('#volver-inicio')?.getAttribute('href') || 'index.html'}" class="button">Volver al inicio</a></div>`;
+            <a href="${rutaInicio()}" class="button">Volver al inicio</a></div>`;
         return;
     }
 
