@@ -1,5 +1,5 @@
 //datos: carga el JSON de conferencias y resuelve rutas de recursos/paginas
-const RAIZ = new URL('../', import.meta.url); //carpeta raiz del proyecto (un nivel arriba de /js/)
+const RAIZ = new URL('../../', import.meta.url); //carpeta raiz del proyecto (dos niveles arriba de /js/conferencias/)
 const RUTA_JSON = new URL('data/conferencias.json', RAIZ).href;
 const enPaginas = /\/pages\//.test(window.location.pathname.replace(/\\/g, '/')); //true si estamos dentro de /pages/
 
@@ -44,9 +44,12 @@ export function rutaCarrito(){
     return enPaginas ? 'carrito.html' : 'pages/carrito.html';
 }
 
-//promedio de calificacion redondeado a estrellas (1 a 5)
-export function promedioEstrellas(conf){
-    if(!conf?.resenas?.length) return 5;
-    const suma = conf.resenas.reduce((acum, r) => acum + (Number(r.calificacion) || 0), 0);
-    return Math.round(suma / conf.resenas.length) || 5;
+//ruta a la pagina de compra (checkout)
+export function rutaCompra(){
+    return enPaginas ? 'compra.html' : 'pages/compra.html';
+}
+
+//ruta a la pagina del ticket
+export function rutaTicket(){
+    return enPaginas ? 'ticket.html' : 'pages/ticket.html';
 }

@@ -4,7 +4,7 @@ import { itemsCarrito, totalCarrito, totalBoletos } from './modelo-carrito.js';
 const listaCarritoEl=document.querySelector('#lista-carrito'); //contenedor del panel
 const listaDetalleEl=document.querySelector('#lista-carrito-detalle'); //contenedor de la pagina detalle
 //ruta absoluta del bote para que funcione tanto en / como en /pages/
-const iconoBasura=new URL('../img/bote-basura.svg',import.meta.url).href;
+const iconoBasura=new URL('../../img/bote-basura.svg',import.meta.url).href;
 
 //una fila del carrito (producto, metadatos y acciones)
 function itemCarritoHTML(item){
@@ -54,4 +54,10 @@ export function htmlCarrito(){
         //sin notificacion si el carrito esta vacio
         badge.classList.toggle('oculto',totalItems===0);
     }
+
+    //en la pagina del carrito: si esta vacio se cambian los botones por "Volver al inicio"
+    const vacio=itemsCarrito.length===0;
+    document.querySelector('#carrito-acciones')?.classList.toggle('hidden',vacio);
+    document.querySelector('#carrito-acciones-vacio')?.classList.toggle('hidden',!vacio);
+    document.querySelector('#carrito-resumen')?.classList.toggle('hidden',vacio);
 }

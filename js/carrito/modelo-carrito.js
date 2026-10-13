@@ -1,6 +1,6 @@
 //modelo: estado del carrito y persistencia
 import { htmlCarrito } from './vista-carrito.js';
-import { obtenerConferencia, rutaImagen } from './datos-conferencias.js';
+import { obtenerConferencia, rutaImagen } from '../conferencias/datos-conferencias.js';
 
 export let itemsCarrito=[]; //lista de items del carrito
 
