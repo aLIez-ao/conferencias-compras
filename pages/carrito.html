@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Carrito</title>
+    <link rel="icon" type="image/png" href="../img/icon.png">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/skeleton.css">
     <link rel="stylesheet" href="../css/custom.css">
@@ -16,23 +17,16 @@
             <div class="navegacion">
                 <!-- Logotipo -->
                 <a href="../index.html" class="logo">
-                    <span class="logo-icono">C</span>
+                    <img src="../img/icon.png" alt="Conferencify" class="logo-icono">
                     <span>Conferencify</span>
                 </a>
 
                 <!-- Menú de navegación -->
                 <nav class="menu-principal">
-                    <a href="../index.html" class="enlace_inicio">Inicio</a>
-                    <a href="../index.html#lista-conferencias" class="enlace_conferencias">Conferencias</a>
-                    <a href="#footer" class="enlace_footer">Acerca de</a>
-
-                    <!-- Ticket integrado como enlace de texto en el menú -->
-                    <div class="submenu-ticketgen-container">
-                        <button id="btn-menu-ticketgen" class="enlace_ticketgen">Ticket</button>
-                        <div id="panel-ticketgen" class="panel-ticketgen-flotante">
-                            <div id="contenido-ticketgen-menu"></div>
-                        </div>
-                    </div>
+                    <a href="../index.html#lista-conferencias">Conferencias</a>
+                    <a href="carrito.html">Mi Carrito</a>
+                    <a href="ticket.html">Mi Ticket</a>
+                    <a href="../index.html#footer">Acerca de</a>
                 </nav>
 
                 <!-- Carrito -->
@@ -48,7 +42,8 @@
                             <div id="carrito">
                                 <div id="lista-carrito"></div>
                                 <p id="total-carrito">Total: $0</p>
-                                <a href="../index.html#pagar" class="button u-full-width">Finalizar compra</a>
+                                <a href="compra.html" class="button u-full-width">Finalizar compra</a>
+                                <a href="carrito.html" class="button u-full-width">Ver carrito</a>
                             </div>
                         </li>
                     </ul>
@@ -63,14 +58,18 @@
 
         <div id="lista-carrito-detalle"></div>
 
-        <div class="carrito-resumen">
+        <div class="carrito-resumen" id="carrito-resumen">
             <p id="total-detalle">Total: $0</p>
         </div>
 
-        <div class="carrito-acciones">
+        <div class="carrito-acciones" id="carrito-acciones">
             <a href="#" id="vaciar-carrito" class="button">Vaciar Carrito</a>
             <a href="../index.html" class="button">Seguir comprando</a>
-            <a href="../index.html#pagar" class="button btn-finalizar">Finalizar compra</a>
+            <a href="compra.html" class="button btn-finalizar">Finalizar compra</a>
+        </div>
+
+        <div class="carrito-acciones hidden" id="carrito-acciones-vacio">
+            <a href="../index.html" class="button btn-finalizar">Volver al inicio</a>
         </div>
     </main>
 

@@ -10,12 +10,7 @@
     "precio": 75,
     "precioAnterior": 100,
     "imagen": "conferencia1.jpg",
-    "descripcion": "El procedimiento para automatizar 100 escaladoras no es para nada sencillo. Este proyecto nace a partir de un encargo hecho hacia el Maestro David para automatizar 4 escaladoras como fase de prueba. Al ver que logro automatizarlas, le pidieron hacerlo con 100 para una serie donde participan grandes famosos, luchadores e influencer fitness. Las herramientas utilizadas fueron placas PCB hechas desde cero conectadas con Arduino Mega, software como AutoCAD y cableado escondido en una piramide de 4 pisos en tan solo 20 dias.",
-    "resenas": [
-      { "autor": "Carlos Hernandez", "calificacion": 5, "tiempo": "Hace 2 semanas", "texto": "El instructor explica de maravilla. Pude entender conceptos que en la escuela me costaron meses. Muy recomendado." },
-      { "autor": "Mariana R.", "calificacion": 4, "tiempo": "Hace 1 mes", "texto": "Muy buena forma de llamarnos la atencion. Me habria gustado mas tiempo de preguntas." },
-      { "autor": "Luis G.", "calificacion": 5, "tiempo": "Hace 2 meses", "texto": "Excelente ambiente y organizacion. Las instalaciones son muy comodas y el material de apoyo es de primera calidad." }
-    ]
+    "descripcion": "El procedimiento para automatizar 100 escaladoras no es para nada sencillo. Este proyecto nace a partir de un encargo hecho hacia el Maestro David para automatizar 4 escaladoras como fase de prueba. Al ver que logro automatizarlas, le pidieron hacerlo con 100 para una serie donde participan grandes famosos, luchadores e influencer fitness. Las herramientas utilizadas fueron placas PCB hechas desde cero conectadas con Arduino Mega, software como AutoCAD y cableado escondido en una piramide de 4 pisos en tan solo 20 dias."
   },
   {
     "id": 2,
@@ -28,12 +23,7 @@
     "precio": 215,
     "precioAnterior": 300,
     "imagen": "conferencia2.jpg",
-    "descripcion": "Emmanuel, estudiante de la FES harto de no ver procedimiento para calcular los mejores jugadores y solo escuchar ideas con pura especulacion, decidio tomar datos sobre la World Cup a traves de informacion confiable como la misma FIFA. Compilo esta informacion y la convirtio en resultados con una base robusta: mas goles por partido, mas asistencias, tiempo de juego de balon por jugador y minutos en campo, demostrando de manera confiable quienes son los mejores jugadores de esta World Cup 2026.",
-    "resenas": [
-      { "autor": "Diego M.", "calificacion": 5, "tiempo": "Hace 1 semana", "texto": "Por fin alguien que habla con datos y no con puro fanatismo. Excelente analisis." },
-      { "autor": "Sofia T.", "calificacion": 4, "tiempo": "Hace 2 semanas", "texto": "Muy interesante el cruce de datos oficiales de la FIFA. Me hubiera gustado mas profundidad en las estadisticas de los defensas." },
-      { "autor": "Alejandro V.", "calificacion": 5, "tiempo": "Hace 1 semana", "texto": "Increible ver a un companero de la FES armar una presentacion tan profesional." }
-    ]
+    "descripcion": "Emmanuel, estudiante de la FES harto de no ver procedimiento para calcular los mejores jugadores y solo escuchar ideas con pura especulacion, decidio tomar datos sobre la World Cup a traves de informacion confiable como la misma FIFA. Compilo esta informacion y la convirtio en resultados con una base robusta: mas goles por partido, mas asistencias, tiempo de juego de balon por jugador y minutos en campo, demostrando de manera confiable quienes son los mejores jugadores de esta World Cup 2026."
   },
   {
     "id": 3,
@@ -46,12 +36,7 @@
     "precio": 75,
     "precioAnterior": 100,
     "imagen": "conferencia3.jpg",
-    "descripcion": "Cualquiera pensaria que programar videojuegos no te dejara nada en la vida o sera muy complicado dedicarse a eso en vez de otras ramas de la ingenieria en computacion, pero el Maestro Jose y sus 4 alumnos demuestran lo contrario. Dos alumnos nos platican como realizaron un juego parecido a Flappy Bird, junto con su soundtrack y todo desde cero, y otros dos nos comparten su experiencia de intercambio en Corea del Sur con temas enfocados al desarrollo de videojuegos.",
-    "resenas": [
-      { "autor": "Javier R.", "calificacion": 5, "tiempo": "Hace 5 dias", "texto": "Escuchar la experiencia del intercambio a Corea del Sur me inspiro muchisimo. Una platica muy motivadora." },
-      { "autor": "Brenda M.", "calificacion": 4, "tiempo": "Hace 1 semana", "texto": "Ver como desarrollaron ese juego tipo Flappy Bird desde cero, incluyendo el soundtrack, me volo la cabeza." },
-      { "autor": "Andres C.", "calificacion": 4, "tiempo": "Hace 2 semanas", "texto": "Gran demostracion de talento. Me habria encantado profundizar mas en el codigo y las herramientas usadas." }
-    ]
+    "descripcion": "Cualquiera pensaria que programar videojuegos no te dejara nada en la vida o sera muy complicado dedicarse a eso en vez de otras ramas de la ingenieria en computacion, pero el Maestro Jose y sus 4 alumnos demuestran lo contrario. Dos alumnos nos platican como realizaron un juego parecido a Flappy Bird, junto con su soundtrack y todo desde cero, y otros dos nos comparten su experiencia de intercambio en Corea del Sur con temas enfocados al desarrollo de videojuegos."
   },
   {
     "id": 4,
@@ -63,13 +48,8 @@
     "cupo": 60,
     "precio": 90,
     "precioAnterior": 140,
-    "imagen": "curso1.jpg",
-    "descripcion": "Un recorrido por las aplicaciones de la inteligencia artificial que ya usamos sin darnos cuenta: recomendaciones, asistentes de voz, traduccion automatica y diagnostico medico. Veremos como funcionan por dentro y que retos eticos plantean.",
-    "resenas": [
-      { "autor": "Paola N.", "calificacion": 5, "tiempo": "Hace 1 semana", "texto": "Explicaciones claras y ejemplos actuales. Me ayudo a entender que hay detras de los asistentes de voz." },
-      { "autor": "Ricardo D.", "calificacion": 4, "tiempo": "Hace 3 semanas", "texto": "Muy buen panorama general, aunque me habria gustado algo mas de practica con modelos reales." },
-      { "autor": "Fernanda L.", "calificacion": 5, "tiempo": "Hace 1 mes", "texto": "La parte de etica me hizo reflexionar bastante. Excelente ponente." }
-    ]
+    "imagen": null,
+    "descripcion": "Un recorrido por las aplicaciones de la inteligencia artificial que ya usamos sin darnos cuenta: recomendaciones, asistentes de voz, traduccion automatica y diagnostico medico. Veremos como funcionan por dentro y que retos eticos plantean."
   },
   {
     "id": 5,
@@ -81,13 +61,8 @@
     "cupo": 45,
     "precio": 120,
     "precioAnterior": 180,
-    "imagen": "curso1.jpg",
-    "descripcion": "Buenas practicas para proteger tu informacion: contrasenas robustas, autenticacion en dos pasos, phishing y como reaccionar ante un incidente. Una conferencia practica para estudiantes y profesionistas.",
-    "resenas": [
-      { "autor": "Kevin S.", "calificacion": 5, "tiempo": "Hace 4 dias", "texto": "Muy util. Ya active el doble factor en todas mis cuentas despues de la platica." },
-      { "autor": "Diana P.", "calificacion": 5, "tiempo": "Hace 2 semanas", "texto": "Los ejemplos de phishing fueron muy realistas. Aprendi a identificar correos peligrosos." },
-      { "autor": "Omar T.", "calificacion": 4, "tiempo": "Hace 1 mes", "texto": "Buena introduccion, aunque para alguien con experiencia puede resultar basica." }
-    ]
+    "imagen": null,
+    "descripcion": "Buenas practicas para proteger tu informacion: contrasenas robustas, autenticacion en dos pasos, phishing y como reaccionar ante un incidente. Una conferencia practica para estudiantes y profesionistas."
   },
   {
     "id": 6,
@@ -99,13 +74,8 @@
     "cupo": 30,
     "precio": 150,
     "precioAnterior": 220,
-    "imagen": "curso1.jpg",
-    "descripcion": "Del brazo robotico a la linea de ensamble automatizada. Conoceremos los principios de la robotica industrial, los sensores y actuadores mas usados y el futuro de la automatizacion en Mexico.",
-    "resenas": [
-      { "autor": "Hugo R.", "calificacion": 5, "tiempo": "Hace 1 semana", "texto": "Ver los robots en vivo fue lo mejor. Explicaron muy bien la parte de sensores." },
-      { "autor": "Valeria M.", "calificacion": 4, "tiempo": "Hace 2 semanas", "texto": "Buen contenido tecnico. El laboratorio se lleno rapido, llega temprano." },
-      { "autor": "Ivan G.", "calificacion": 5, "tiempo": "Hace 1 mes", "texto": "Me motiva a especializarme en robotica. Muy recomendada." }
-    ]
+    "imagen": null,
+    "descripcion": "Del brazo robotico a la linea de ensamble automatizada. Conoceremos los principios de la robotica industrial, los sensores y actuadores mas usados y el futuro de la automatizacion en Mexico."
   },
   {
     "id": 7,
@@ -117,13 +87,8 @@
     "cupo": 55,
     "precio": 130,
     "precioAnterior": 190,
-    "imagen": "curso1.jpg",
-    "descripcion": "La cadena de bloques no solo sirve para criptomonedas. Revisaremos contratos inteligentes, trazabilidad de productos, votaciones electronicas y como esta tecnologia puede transparentar procesos.",
-    "resenas": [
-      { "autor": "Sergio O.", "calificacion": 4, "tiempo": "Hace 2 semanas", "texto": "Buen recorrido por casos de uso reales. Ideal para quien cree que blockchain es solo bitcoin." },
-      { "autor": "Carla V.", "calificacion": 5, "tiempo": "Hace 1 mes", "texto": "La parte de contratos inteligentes me parecio fascinante." },
-      { "autor": "Mateo F.", "calificacion": 4, "tiempo": "Hace 1 mes", "texto": "Buen equilibrio entre teoria y ejemplos. Me gustaria una demo en vivo." }
-    ]
+    "imagen": null,
+    "descripcion": "La cadena de bloques no solo sirve para criptomonedas. Revisaremos contratos inteligentes, trazabilidad de productos, votaciones electronicas y como esta tecnologia puede transparentar procesos."
   },
   {
     "id": 8,
@@ -135,13 +100,8 @@
     "cupo": 40,
     "precio": 110,
     "precioAnterior": 160,
-    "imagen": "curso1.jpg",
-    "descripcion": "Como la realidad aumentada esta transformando la forma de aprender: modelos 3D interactivos, laboratorios virtuales y materiales que cobran vida frente a los estudiantes.",
-    "resenas": [
-      { "autor": "Renata A.", "calificacion": 5, "tiempo": "Hace 5 dias", "texto": "Las demos de RA en el aula me dejaron sorprendida. Ojala se implementen aqui." },
-      { "autor": "Bruno E.", "calificacion": 4, "tiempo": "Hace 3 semanas", "texto": "Muy creativo. La parte tecnica pudo ser un poco mas profunda." },
-      { "autor": "Ximena R.", "calificacion": 5, "tiempo": "Hace 1 mes", "texto": "Excelente para docentes y estudiantes por igual." }
-    ]
+    "imagen": null,
+    "descripcion": "Como la realidad aumentada esta transformando la forma de aprender: modelos 3D interactivos, laboratorios virtuales y materiales que cobran vida frente a los estudiantes."
   },
   {
     "id": 9,
@@ -153,13 +113,8 @@
     "cupo": 70,
     "precio": 160,
     "precioAnterior": 240,
-    "imagen": "curso1.jpg",
-    "descripcion": "Desplegar aplicaciones en la nube ya no es exclusivo de las grandes empresas. Veremos contenedores, microservicios, serverless y como elegir la arquitectura adecuada para cada proyecto.",
-    "resenas": [
-      { "autor": "Adrian L.", "calificacion": 5, "tiempo": "Hace 1 semana", "texto": "Justo lo que necesitaba para mi proyecto final. Muy claro con Docker." },
-      { "autor": "Noemi C.", "calificacion": 4, "tiempo": "Hace 2 semanas", "texto": "Amplio y bien estructurado. Serverless quedo un poco apresurado." },
-      { "autor": "Emiliano Z.", "calificacion": 5, "tiempo": "Hace 1 mes", "texto": "El mejor panorama de arquitecturas que he visto en una conferencia." }
-    ]
+    "imagen": null,
+    "descripcion": "Desplegar aplicaciones en la nube ya no es exclusivo de las grandes empresas. Veremos contenedores, microservicios, serverless y como elegir la arquitectura adecuada para cada proyecto."
   },
   {
     "id": 10,
@@ -171,13 +126,8 @@
     "cupo": 50,
     "precio": 140,
     "precioAnterior": 200,
-    "imagen": "curso1.jpg",
-    "descripcion": "De la idea a la tienda de aplicaciones. Repasaremos el ciclo de desarrollo movil, el diseno de interfaces, el manejo de datos y los pasos para publicar tu primera app.",
-    "resenas": [
-      { "autor": "Jazmin H.", "calificacion": 5, "tiempo": "Hace 6 dias", "texto": "Publicar mi primera app ya no parece imposible. Muy motivadora." },
-      { "autor": "Luis Angel M.", "calificacion": 4, "tiempo": "Hace 3 semanas", "texto": "Buen enfoque practico. Me habria gustado comparar iOS y Android a fondo." },
-      { "autor": "Perla G.", "calificacion": 5, "tiempo": "Hace 1 mes", "texto": "El diseno de interfaces fue mi parte favorita." }
-    ]
+    "imagen": null,
+    "descripcion": "De la idea a la tienda de aplicaciones. Repasaremos el ciclo de desarrollo movil, el diseno de interfaces, el manejo de datos y los pasos para publicar tu primera app."
   },
   {
     "id": 11,
@@ -189,13 +139,8 @@
     "cupo": 65,
     "precio": 170,
     "precioAnterior": 250,
-    "imagen": "curso1.jpg",
-    "descripcion": "Las empresas toman decisiones todos los dias con datos. Aprenderemos como se recolectan, limpian y analizan grandes volumenes de informacion para convertirla en decisiones inteligentes.",
-    "resenas": [
-      { "autor": "Marcos R.", "calificacion": 5, "tiempo": "Hace 1 semana", "texto": "Muy completo. Los ejemplos de visualizacion son oro puro." },
-      { "autor": "Abril S.", "calificacion": 4, "tiempo": "Hace 2 semanas", "texto": "Buen contenido. La parte de limpieza de datos es la mas valiosa." },
-      { "autor": "Tomas V.", "calificacion": 5, "tiempo": "Hace 1 mes", "texto": "Me convencio de estudiar ciencia de datos." }
-    ]
+    "imagen": null,
+    "descripcion": "Las empresas toman decisiones todos los dias con datos. Aprenderemos como se recolectan, limpian y analizan grandes volumenes de informacion para convertirla en decisiones inteligentes."
   },
   {
     "id": 12,
@@ -207,13 +152,8 @@
     "cupo": 35,
     "precio": 180,
     "precioAnterior": 260,
-    "imagen": "curso1.jpg",
-    "descripcion": "Sensores, actuadores y conectividad para convertir tu casa en un entorno inteligente. Veremos como integrar dispositivos, plataformas en la nube y automatizaciones sencillas.",
-    "resenas": [
-      { "autor": "Santiago B.", "calificacion": 5, "tiempo": "Hace 4 dias", "texto": "Termine la conferencia con ganas de automatizar mi cuarto. Muy practica." },
-      { "autor": "Lucia N.", "calificacion": 4, "tiempo": "Hace 2 semanas", "texto": "Buena base de electronica y conectividad. El cupo es reducido, aprovecha." },
-      { "autor": "Rafael Q.", "calificacion": 5, "tiempo": "Hace 1 mes", "texto": "Los proyectos mostrados son alcanzables para estudiantes." }
-    ]
+    "imagen": null,
+    "descripcion": "Sensores, actuadores y conectividad para convertir tu casa en un entorno inteligente. Veremos como integrar dispositivos, plataformas en la nube y automatizaciones sencillas."
   },
   {
     "id": 13,
@@ -225,12 +165,7 @@
     "cupo": 80,
     "precio": 100,
     "precioAnterior": 150,
-    "imagen": "curso1.jpg",
-    "descripcion": "Historias reales de emprendedores tecnologicos en Mexico: como validar una idea, formar un equipo, conseguir financiamiento y superar los primeros anos de una startup.",
-    "resenas": [
-      { "autor": "Ana Sofia L.", "calificacion": 5, "tiempo": "Hace 1 semana", "texto": "Inspiradora de principio a fin. Me dio una ruta clara para mi proyecto." },
-      { "autor": "Gael M.", "calificacion": 5, "tiempo": "Hace 2 semanas", "texto": "Los consejos sobre validacion de ideas valen oro." },
-      { "autor": "Camila R.", "calificacion": 4, "tiempo": "Hace 1 mes", "texto": "Muy motivadora, aunque el tema de financiamiento se vio por encima." }
-    ]
+    "imagen": null,
+    "descripcion": "Historias reales de emprendedores tecnologicos en Mexico: como validar una idea, formar un equipo, conseguir financiamiento y superar los primeros anos de una startup."
   }
 ]

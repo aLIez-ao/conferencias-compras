@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Conferencify</title>
+    <link rel="icon" type="image/png" href="img/icon.png">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/custom.css">
@@ -18,24 +19,16 @@
 
             <!-- Logotipo -->
             <a href="index.html" class="logo">
-                <span class="logo-icono">C</span>
+                <img src="img/icon.png" alt="Conferencify" class="logo-icono">
                 <span>Conferencify</span>
             </a>
 
             <!-- Menú de navegación -->
             <nav class="menu-principal">
-                <a href="index.html" class="enlace_inicio">Inicio</a>
-                <a href="#lista-conferencias" class="enlace_conferencias">Conferencias</a>
-                <a href="#footer" class="enlace_footer">Acerca de</a>
-
-                <!-- Ticket integrado como enlace de texto en el menú -->
-                <div class="submenu-ticketgen-container">
-                    <button id="btn-menu-ticketgen" class="enlace_ticketgen">Ticket</button>
-                    <div id="panel-ticketgen" class="panel-ticketgen-flotante">
-                        <div id="contenido-ticketgen-menu">
-                        </div>
-                    </div>
-                </div>
+                <a href="#lista-conferencias">Conferencias</a>
+                <a href="pages/carrito.html">Mi Carrito</a>
+                <a href="pages/ticket.html">Mi Ticket</a>
+                <a href="#footer">Acerca de</a>
             </nav>
             <!-- Carrito -->
             <div class="acciones-header">
@@ -51,7 +44,7 @@
                         <div id="carrito">
                             <div id="lista-carrito"></div>
                             <p id="total-carrito">Total: $0</p>
-                            <a href="#" class="button u-full-width btn-pagar">Pagar</a>
+                            <a href="pages/compra.html" class="button u-full-width">Finalizar compra</a>
                             <a href="pages/carrito.html"
                                 class="button u-full-width">Ver carrito</a>
                         </div>
@@ -104,114 +97,6 @@
     <div id="grid-conferencias" class="grid-conferencias"></div>
 </div>
 
-<!-- ======================================================== -->
-<!-- MODALES DE PAGO, CONFIRMACIÓN Y TICKET                   -->
-<!-- ======================================================== -->
-
-<!-- 1. Modal de Selección y Formulario de Pago -->
-<dialog id="modal-pago" class="modal-pago">
-    <div class="modal-contenido">
-        <button type="button" id="cerrar-modal-pago" class="btn-cerrar">&times;</button>
-        <h2>Finalizar Compra</h2>
-        <p class="resumen-total">Total a pagar: <strong id="pago-monto-total">$0.00</strong></p>
-
-        <!-- Pestañas / Selección de Método de Pago -->
-        <div class="metodos-pago-tabs">
-            <label class="tab-metodo activo">
-                <input type="radio" name="metodo-pago" value="tarjeta" checked>
-                Tarjeta de Crédito / Débito
-            </label>
-            <label class="tab-metodo">
-                <input type="radio" name="metodo-pago" value="paypal">
-                PayPal
-            </label>
-            <label class="tab-metodo">
-                <input type="radio" name="metodo-pago" value="transferencia">
-                Transferencia SPEI
-            </label>
-        </div>
-
-        <!-- Formulario de Tarjeta -->
-        <form id="form-pago" class="form-pago">
-            <div id="seccion-tarjeta" class="seccion-metodo activo">
-                <div class="campo-grupo">
-                    <label for="tarjeta-titular">Nombre del Titular</label>
-                    <input type="text" id="tarjeta-titular" placeholder="Ej. Juan Pérez" required>
-                </div>
-                <div class="campo-grupo">
-                    <label for="tarjeta-numero">Número de Tarjeta</label>
-                    <input type="text" id="tarjeta-numero" placeholder="16 dígitos continuos" maxlength="16" required>
-                </div>
-                <div class="campo-fila">
-                    <div class="campo-grupo">
-                        <label for="tarjeta-expira">Expiración (MM/AA)</label>
-                        <input type="text" id="tarjeta-expira" placeholder="MM/AA" maxlength="5" required>
-                    </div>
-                    <div class="campo-grupo">
-                        <label for="tarjeta-cvv">CVV</label>
-                        <input type="text" id="tarjeta-cvv" placeholder="3-4 dígitos" maxlength="4" required>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sección PayPal -->
-            <div id="seccion-paypal" class="seccion-metodo">
-                <p class="info-pago">Serás redirigido a PayPal para autorizar el pago de forma segura.</p>
-            </div>
-
-            <!-- Sección Transferencia -->
-            <div id="seccion-transferencia" class="seccion-metodo">
-                <p class="info-pago">Realiza tu transferencia SPEI a los siguientes datos:</p>
-                <div class="datos-banco">
-                    <p><strong>Banco:</strong> BBVA</p>
-                    <p><strong>CLABE:</strong> 0121 8000 1234 5678 90</p>
-                    <p><strong>Concepto:</strong> Boletos FES</p>
-                </div>
-            </div>
-
-            <!-- Mensaje de estado/error -->
-            <div id="mensaje-pago-estado" class="mensaje-pago hidden"></div>
-
-            <div class="acciones-modal">
-                <button type="submit" id="btn-confirmar-pago" class="btn-pagar-main">Pagar Ahora</button>
-            </div>
-        </form>
-    </div>
-</dialog>
-
-<!-- 2. Modal de Confirmación o Resultado -->
-<dialog id="modal-confirmacion" class="modal-pago">
-    <div class="modal-contenido text-center">
-        <div id="icono-resultado" class="icono-resultado exito">&#10004;</div>
-        <h2 id="titulo-confirmacion">¡Compra Exitosa!</h2>
-        <p id="subtitulo-confirmacion">Tus boletos han sido procesados correctamente.</p>
-
-        <div id="detalles-orden" class="detalles-orden">
-            <p><strong>Número de Orden:</strong> <span id="orden-folio">#00000</span></p>
-            <p><strong>Monto Pagado:</strong> <span id="orden-monto">$0.00</span></p>
-        </div>
-
-        <!-- Botones de Acción -->
-        <div class="acciones-confirmacion">
-            <button type="button" id="btn-ver-ticket" class="btn-pagar-main btn-ver-ticket">Ver Ticket</button>
-            <button type="button" id="btn-cerrar-confirmacion" class="btn-pagar-main">Aceptar y Cerrar</button>
-        </div>
-    </div>
-</dialog>
-
-<!-- 3. Modal del Ticket / Comprobante -->
-<dialog id="modal-ticket" class="modal-pago">
-    <div class="modal-contenido">
-        <button type="button" id="cerrar-modal-ticket" class="btn-cerrar">&times;</button>
-        <div id="contenido-ticket">
-            <!-- ticket.js renderizará dinámicamente la información del ticket aquí -->
-        </div>
-        <div class="acciones-ticket">
-            <button type="button" id="btn-imprimir-ticket" class="btn-pagar-main">Imprimir / Descargar Ticket</button>
-        </div>
-    </div>
-</dialog>
-
 <!-- pie de pagina -->
 
     <footer id="footer" class="footer">
@@ -228,7 +113,6 @@
 </footer>
 
     <script type="module" src="js/app.js"></script> <!-- app: arranque (importa modelo y vista) -->
-    <script type="module" src="js/pago.js"></script>
 
 </body>
 

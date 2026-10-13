@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar compra</title>
+    <link rel="icon" type="image/png" href="../img/icon.png">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/skeleton.css">
+    <link rel="stylesheet" href="../css/custom.css">
+</head>
+
+<body>
+    <header id="header" class="header">
+        <div class="container">
+            <div class="navegacion">
+                <!-- Logotipo -->
+                <a href="../index.html" class="logo">
+                    <img src="../img/icon.png" alt="Conferencify" class="logo-icono">
+                    <span>Conferencify</span>
+                </a>
+
+                <!-- Menú de navegación -->
+                <nav class="menu-principal">
+                    <a href="../index.html#lista-conferencias">Conferencias</a>
+                    <a href="carrito.html">Mi Carrito</a>
+                    <a href="ticket.html">Mi Ticket</a>
+                    <a href="../index.html#footer">Acerca de</a>
+                </nav>
+
+                <!-- Carrito -->
+                <div class="acciones-header">
+                    <ul>
+                        <li class="submenu">
+                            <button id="img-carrito" class="boton-carrito" aria-label="Abrir carrito">
+                                <img src="../img/carrito-icon.svg" alt="Carrito de compras" width="32" height="32">
+                                <span id="badge-carrito">0</span>
+                            </button>
+
+                            <div id="carrito">
+                                <div id="lista-carrito"></div>
+                                <p id="total-carrito">Total: $0</p>
+                                <a href="compra.html" class="button u-full-width">Finalizar compra</a>
+                                <a href="carrito.html" class="button u-full-width">Ver carrito</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGINA DE COMPRA -->
+    <main class="container compra-pagina">
+        <h1 class="encabezado">Finalizar compra</h1>
+
+        <div class="row">
+            <!-- Resumen de la orden -->
+            <div class="seven columns">
+                <section class="compra-resumen">
+                    <h3>Resumen de tu compra</h3>
+                    <div id="compra-items"></div>
+                    <p id="compra-total" class="compra-total">Total: $0</p>
+                </section>
+            </div>
+
+            <!-- Datos de pago -->
+            <div class="five columns">
+                <section class="compra-pago" id="compra-pago-seccion">
+                    <h3>Método de pago</h3>
+
+                    <div class="metodos-pago-tabs">
+                        <label class="tab-metodo activo">
+                            <input type="radio" name="metodo-pago" value="tarjeta" checked>
+                            Tarjeta
+                        </label>
+                        <label class="tab-metodo">
+                            <input type="radio" name="metodo-pago" value="paypal">
+                            PayPal
+                        </label>
+                        <label class="tab-metodo">
+                            <input type="radio" name="metodo-pago" value="transferencia">
+                            SPEI
+                        </label>
+                    </div>
+
+                    <form id="form-pago" class="form-pago">
+                        <div id="seccion-tarjeta" class="seccion-metodo activo">
+                            <div class="campo-grupo">
+                                <label for="tarjeta-titular">Nombre del titular</label>
+                                <input type="text" id="tarjeta-titular" placeholder="Ej. Juan Pérez" required>
+                            </div>
+                            <div class="campo-grupo">
+                                <label for="tarjeta-numero">Número de tarjeta</label>
+                                <input type="text" id="tarjeta-numero" placeholder="16 dígitos continuos" maxlength="16" required>
+                            </div>
+                            <div class="campo-fila">
+                                <div class="campo-grupo">
+                                    <label for="tarjeta-expira">Expiración (MM/AA)</label>
+                                    <input type="text" id="tarjeta-expira" placeholder="MM/AA" maxlength="5" required>
+                                </div>
+                                <div class="campo-grupo">
+                                    <label for="tarjeta-cvv">CVV</label>
+                                    <input type="text" id="tarjeta-cvv" placeholder="3-4 dígitos" maxlength="4" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="seccion-paypal" class="seccion-metodo">
+                            <p class="info-pago">Serás redirigido a PayPal para autorizar el pago de forma segura.</p>
+                        </div>
+
+                        <div id="seccion-transferencia" class="seccion-metodo">
+                            <p class="info-pago">Realiza tu transferencia SPEI a los siguientes datos:</p>
+                            <div class="datos-banco">
+                                <p><strong>Banco:</strong> BBVA</p>
+                                <p><strong>CLABE:</strong> 0121 8000 1234 5678 90</p>
+                                <p><strong>Concepto:</strong> Boletos FES</p>
+                            </div>
+                        </div>
+
+                        <div id="mensaje-pago-estado" class="mensaje-pago hidden"></div>
+
+                        <button type="submit" id="btn-confirmar-pago" class="btn-pagar-main u-full-width">Pagar ahora</button>
+                    </form>
+                </section>
+
+                <!-- Carrito vacío: sin pago, solo volver -->
+                <section class="compra-pago hidden" id="compra-vacio-seccion">
+                    <h3>No hay nada que pagar</h3>
+                    <p class="compra-vacia">Tu carrito está vacío. Agrega boletos para continuar.</p>
+                    <a href="../index.html" class="button u-full-width btn-finalizar">Volver al inicio</a>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de pagina -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="row">
+                <p>© 2026 Conferencify. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/app.js"></script> <!-- app: arranque (cabecera + carrito) -->
+    <script type="module" src="../js/pago/pago.js"></script> <!-- pago: logica del checkout -->
+
+</body>
+
+</html>
